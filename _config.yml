@@ -1,0 +1,19 @@
+# Dependencies
+markdown:            kramdown
+highlighter:         rouge
+
+# Setup
+title:               Graham Enos
+tagline:             "math, programming, statistics, and data"
+description:         "math, programming, statistics, and data"
+url:                 http://grahamenos.com
+baseurl:             /
+permalink:           none
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+
+
+# About/contact
+author:
+  name:              Graham Enos
+  url:               http://grahamenos.com

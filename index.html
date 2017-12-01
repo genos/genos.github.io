@@ -1,0 +1,22 @@
+---
+layout: default
+title: Home
+---
+<div class="greeting">
+  Hi!
+  I'm <a href="/about">Graham</a>, a data scientist and applied research
+  mathematician.
+</div>
+<ul>
+  {% for post in site.posts %}
+  <li class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+<div class="footer">
+  All writing on this site is
+  <a rel="license"
+     href="https://creativecommons.org/publicdomain/zero/1.0/">public
+     domain</a>;
+   all code is licensed under the
+   <a rel="license" href="https://opensource.org/licenses/MIT">MIT License</a>.
+</div>

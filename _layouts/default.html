@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.tagline }}">
+    <meta name="author" content="Graham Enos">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="{{ site.baseurl }}public/genos.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}public/katex.min.css">
+  </head>
+  <body>
+    <div>
+      {{ content }}
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{{ site.baseurl }}">Home</a></li>
+        <li><a href="{{ site.baseurl }}about">About</a></li>
+        <li><a href="https://github.com/genos">GitHub</a></li>
+        <li><a href="https://twitter.com/graham_enos">Twitter</a></li>
+      </ul>
+    </nav>
+    <script type="text/javascript" src="{{ site.baseurl }}public/katex.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}public/auto-render.min.js"></script>
+    <script>renderMathInElement(document.body);</script>
+  </body>
+</html>
