@@ -158,8 +158,8 @@ a {
 }
 a::after {
   color: #226699;
-  content: "◊";
-  font-size: 60%;
+  content: "°";
+  font-size: 100%;
   vertical-align: super;
 }
 a:hover {
@@ -183,6 +183,7 @@ body {
 code {
   font-family: 'Anonymous Pro', monospace;
   font-size: 95%;
+  line-height: 1.75;
 }
 .date {
 	font-family: 'Quattrocento', serif;
