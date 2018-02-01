@@ -160,7 +160,6 @@ a::after {
   color: #226699;
   content: "°";
   font-size: 100%;
-  vertical-align: super;
 }
 a:hover {
   background: #D2E0EA;
