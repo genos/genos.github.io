@@ -157,12 +157,13 @@ a {
   text-decoration: none;
 }
 a::after {
-  color: #226699;
+  color: #225EA8;
   content: "°";
-  font-size: 100%;
+  font-size: 110%;
+  margin-left: 0.1rem;
 }
 a:hover {
-  background: #D2E0EA;
+  background: #7FCDBB;
 }
 blockquote {
   font-size: 90%;
@@ -203,15 +204,14 @@ strong {
   padding-top: 1em;
 }
 a.footnote {
-  font-size: 60%;
+  color: #225EA8;
+  font-size: 75%;
   vertical-align: super;
 }
 a.footnote::after {
-  content: "";
-  content: none;
+  content: "\2004";
 }
 a.reversefootnote::after {
-  content: "";
   content: none;
 }
 .footnotes {
@@ -277,4 +277,3 @@ p {
 pre {
   margin-bottom: 1em;
 }
-
