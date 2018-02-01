@@ -182,7 +182,7 @@ body {
 code {
   font-family: 'Anonymous Pro', monospace;
   font-size: 95%;
-  line-height: 1.42;
+  line-height: 1.50;
 }
 .date {
 	font-family: 'Quattrocento', serif;
@@ -251,24 +251,25 @@ nav li {
   margin-right: 5em;
 }
 p {
-  font-size: 115%;
-  line-height: 1.5;
+  font-size: 125%;
+  line-height: 2;
   margin-bottom: 1em;
 }
 .post h1 {
   font-size: 125%;
 }
 .post li {
-  line-height: 1.35;
+  font-size: 125%;
+  line-height: 1.75;
   padding-bottom: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
 }
 .post ol {
   list-style-type: decimal;
+  padding-left: 4rem;
 }
 .post ul {
   list-style-type: circle;
+  padding-left: 4rem;
 }
 .post-title {
   font-size: 125%;
