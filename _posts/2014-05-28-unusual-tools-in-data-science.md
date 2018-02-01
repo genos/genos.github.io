@@ -77,6 +77,6 @@ Attoparsec leads to solutions that are
 Moral of the story: if you're doing data science, don't be afraid to use
 different tools than you're used to; they just might lead to better solutions.
 
-[^1]: The post from which I <s>stole</s> borrowed that picture is also [a pretty good read.](http://slantedwindows.com/why-you-already-are-a-data-scientist-its-just-may-not-be-your-job-title/)
+[^1]: The post from which I <s>stole</s> borrowed that picture is also [a pretty good read.](https://web.archive.org/web/20150309222357/http://www.slantedwindows.com/why-you-already-are-a-data-scientist-its-just-may-not-be-your-job-title/)
 [^2]: Or perhaps that's just at my workplace.
 [^3]: Which I've also done because Haskell wasn't an option (the people I was working with **only** liked *Perl*), and it lead to some horrific circumstances similar to [this](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454).
