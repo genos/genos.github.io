@@ -6,7 +6,7 @@ highlighter:         rouge
 title:               Graham Enos
 tagline:             "math, programming, statistics, and data"
 description:         "math, programming, statistics, and data"
-url:                 http://grahamenos.com
+url:                 https://grahamenos.com
 baseurl:             /
 permalink:           none
 kramdown:
