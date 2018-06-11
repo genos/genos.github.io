@@ -102,7 +102,7 @@ def main(args: Namespace) -> None:
     …
 ```
 
-Some folks might cry that this doesn't look like Python anymore but to them I
+Some folks might cry that this doesn't look like Python anymore, but to them I
 counter
 - [Python Enhancement Proposal 484](https://www.python.org/dev/peps/pep-0484/)
   already accepted type hints into the language, and
