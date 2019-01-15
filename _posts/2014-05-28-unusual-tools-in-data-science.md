@@ -64,10 +64,8 @@ already
 intros out there that do a better job than I could.
 I'll just echo the
 [experiences](http://newartisans.com/2012/08/parsing-with-haskell-and-attoparsec/)
-of
-[others](https://variadic.me/posts/2012-02-25-adventures-in-parsec-attoparsec.html)
-out there and let you know that parsing ad hoc (or just new) file formats with
-Attoparsec leads to solutions that are
+of others out there and let you know that parsing ad hoc (or just new) file
+formats with Attoparsec leads to solutions that are
 
 - easier to read that regexes
 - easier to reason about than regexes
