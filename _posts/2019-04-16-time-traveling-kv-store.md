@@ -46,11 +46,33 @@ time 7 you call `TTKV.put("a", 2)`, then
 My Python in-the-room implementation relied on side-effects, reading a global
 [nanosecond
 clock.](https://docs.python.org/3.7/library/time.html#time.process_time_ns)
+This was less than ideal, and though it met the remit, it wasn't easily
+testable---which I suspect was the point of the exercise.
+
 By its nature, `put` involves an effect: reading a time.
 To do things functionally, I'll turn to `cats-effect` and explicitly make note
 of this effectful computation.
+This involves a slight change to TTKV's API; while `get` stays the same, we'll
+change `put` to the following:
+
+```scala
+def put[F[_]](key: K, value: V)
+             (implicit sync: Sync[F], clock: Clock[F]): F[TTKV[K, V]]
+```
+
+First, rather than mutating `TTKV` in place, `put` returns a new one with the
+`(key, value)` pair added for a specific time.
+Second, we're explicitly noting that this work takes place inside a `Clock`
+effect, from which we grab the current time.
+I like how we can still `get` the same way as before, since querying a TTKV
+shouldn't have to concern itself with effects, but this design specifically
+highlights that `put` is different.
 
 # Implementation
+
+Here's my implementation in its entirety (again, head to
+[GitHub](https://github.com/genos/Programming/tree/master/workbench/ttkv) to
+see it in action):
 
 ```scala
 package ttkv
