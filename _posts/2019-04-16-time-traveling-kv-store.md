@@ -191,7 +191,7 @@ let
     fetchTarball https://github.com/NixOS/nixpkgs/archive/19.03.tar.gz
   ) {};
 in
-  pkgs.stdenv.mkDerivation rec {
+  pkgs.stdenv.mkDerivation {
     name = "ttkv";
     buildInputs = [ pkgs.sbt ];
     shellHook = ''
