@@ -79,6 +79,7 @@ package ttkv
 
 import cats.effect.{Clock, Sync}
 import cats.implicits._
+import alleycats.std.iterable._
 import scala.concurrent.duration.NANOSECONDS
 import scala.collection.immutable.LongMap
 
@@ -93,7 +94,7 @@ case class TTKV[K, V](inner: Map[K, LongMap[V]]) extends AnyVal {
   def get(key: K, time: Option[Long] = None): Option[V] =
     for {
       m <- inner.get(key)
-      keys = m.keys.toList.filter(_ <= time.getOrElse(Long.MaxValue))
+      keys = m.keys.filter(_ <= time.getOrElse(Long.MaxValue))
       t0 <- keys.maximumOption
       value <- m.get(t0)
     } yield value
@@ -203,7 +204,8 @@ lazy val root = (project in file("."))
   .settings(
     name := "ttkv",
     libraryDependencies ++= Seq(
-      "org.typelevel" %% "cats-effect" % "1.2.0",
+      "org.typelevel" %% "cats-effect" % "1.3.0",
+      "org.typelevel" %% "alleycats-core" % "1.6.0",
       "org.scalacheck" %% "scalacheck" % "1.14.0" % "test"
     ),
     scalacOptions ++= Seq(
