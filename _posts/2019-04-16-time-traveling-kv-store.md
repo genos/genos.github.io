@@ -77,7 +77,6 @@ see it in action):
 ```scala
 package ttkv
 
-import cats.data.{NonEmptyList => NEL}
 import cats.effect.{Clock, Sync}
 import cats.implicits._
 import scala.concurrent.duration.NANOSECONDS
@@ -94,21 +93,16 @@ case class TTKV[K, V](inner: Map[K, LongMap[V]]) extends AnyVal {
   def get(key: K, time: Option[Long] = None): Option[V] =
     for {
       m <- inner.get(key)
-      keys <- NEL.fromList {
-        m.keys.toList.filter(_ <= time.getOrElse(Long.MaxValue))
-      }
+      keys = m.keys.toList.filter(_ <= time.getOrElse(Long.MaxValue))
       t0 <- keys.maximumOption
       value <- m.get(t0)
     } yield value
 
-  def times(key: K): Option[NEL[Long]] =
-    inner.get(key).flatMap(m => NEL.fromList(m.keys.toList.sorted))
+  def times(key: K): List[Long] =
+    inner.get(key).map(_.keys.toList.sorted).getOrElse(Nil)
 
-  def times: Option[NEL[Long]] =
-    for {
-      ks <- NEL.fromList(inner.keys.toList)
-      ts <- ks.traverse(times)
-    } yield ts.flatten.sorted
+  def times: List[Long] =
+    inner.keys.toList.flatMap(times).sorted
 }
 
 object TTKV {
@@ -154,7 +148,7 @@ property("get before time") = forAll {
       TTKV.empty
         .put(a, x)
         .map { m =>
-          val t0 = m.times(a).get.head
+          val t0 = m.times(a).head
           m.get(a, Some(t0 - t)) == None
         }.unsafeRunSync
 }
@@ -171,7 +165,7 @@ property("middle get") = forAll {
         .put(a, x)
         .flatMap(_.put(a, y))
         .map { m =>
-          val ts = m.times(a).get
+          val ts = m.times(a)
           val t0 = ts.head
           val t1 = ts.last
           val δ = (t1 - t0) * d
