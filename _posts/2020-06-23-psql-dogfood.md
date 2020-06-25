@@ -8,9 +8,9 @@ layout: post
 It's probably not news to you, but folks behind the [PostgreSQL
 Database](https://www.postgresql.org) have made an _incredible_ piece of
 software. It's fast, it can handle loads of data, and it has interesting
-built-in functions and index types for almost anything you can think to ask.
-For this post, though, I'd like to highlight how it facilitates DB maintenance
-tasks by [eating its own dog
+builtin functions and index types for almost anything you might need. For this
+post, though, I'd like to highlight how it facilitates DB maintenance tasks by
+[eating its own dog
 food](https://en.wikipedia.org/wiki/Eating_your_own_dog_food)—that is, how
 answering questions _about_ the database is no different from running regular
 SQL queries.
@@ -19,13 +19,13 @@ SQL queries.
 
 At [work](https://www.quantifind.com), we've got a fair amount of data. I'm
 charged with the care and feeding of a couple of these databases, one of which
-recently got a _huge_ upgrade of incoming data; previously it only contained
-our data vendor's restricted version of US and Canada data, and we upgrade to
+recently got a _huge_ upgrade of incoming data. Previously it contained
+our data vendor's restricted version of US-and-Canada-only data; we switched to
 the `WHOLE_DANG_WORLD` option.
 
 When we (I) created our DB schema, we relied heavily upon materialized views;
 the thought was we'd keep the incoming raw data in tables, perform some
-DB-level ETL extraction work, then put the main data we wish to use into
+DB-level ETL work, then put the main data we wish to use into tidy,
 consolidated materialized views. This design made sense given what we thought
 our paradigm was going to be: we were expecting
 
@@ -33,7 +33,7 @@ our paradigm was going to be: we were expecting
   - we would receive small incremental updates of that data frequently from our vendor, so we could `UPDATE` the raw tables and `REFRESH` the materialized views to stay up to date.
 
 However, this is decidedly not the paradigm in which we find ourselves. The
-data is almost ready for our ML algorithms to grab, modulo some
+raw data is almost ready for our ML algorithms to grab, modulo some
 normalizations, and instead of frequent small updates we receive quarterly
 dumps of the _entire_ database. This led to a lot of waste, but there was one
 particular pain point: because we used materialized views, when our intrepid
