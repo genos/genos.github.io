@@ -144,9 +144,9 @@ in
     src = ./.;
     buildInputs = [ clojure jdk ];
     shellHook = ''
-      it () {
-        ${jdk}/bin/java -cp ${tesser}:${matrix}:${clojure}/share/java/clojure.jar clojure.main ${./diaconis.clj}
-      }
+    it () {
+      java -cp ${tesser}:${matrix} clojure.main ${name}
+    }
     '';
   }
 ```
