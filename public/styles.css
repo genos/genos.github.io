@@ -79,6 +79,8 @@ body {
   background: #FAFAFA;
   color: #000000;
   font-family: 'Computer Modern Serif', serif;
+  font-kerning: normal;
+  font-variant: common-ligatures;
   line-height: 175%;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -101,7 +103,6 @@ em {
 }
 strong {
   font-weight: normal;
-  font-variant: small-caps;
 }
 .footer {
   font-family: 'Computer Modern Serif', serif;
@@ -131,7 +132,8 @@ a.footnote::after {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Computer Modern Serif', serif;
   font-size: 175%;
-  font-weight: 700;
+  font-variant: small-caps;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 img {
