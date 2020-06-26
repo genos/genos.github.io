@@ -1,5 +1,5 @@
 ---
-title: "HyperLogLog is wicked cool"
+title: "HyperLogLog is Wicked Cool"
 layout: post
 ---
 

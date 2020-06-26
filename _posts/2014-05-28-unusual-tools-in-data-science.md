@@ -1,5 +1,5 @@
 ---
-title: "Unusual tools in Data Science"
+title: "Unusual Tools in Data Science"
 layout: post
 ---
 
