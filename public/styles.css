@@ -84,6 +84,7 @@ body {
   margin-bottom: 5%;
   margin-left: 17%;
   margin-right: 17%;
+  text-rendering: optimizeLegibility;
 }
 code {
   font-family: 'Triplicate T4 Code', monospace;
