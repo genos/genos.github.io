@@ -91,7 +91,7 @@ code {
 	font-size: 90%;
 }
 .date {
-	font-family: 'Triplicate T4 Code', monospace;
+	font-family: 'Computer Modern Serif', serif;
   font-style: italic;
   margin-top: -0.5rem;
   margin-bottom: 1rem;
@@ -175,3 +175,20 @@ p {
 pre {
   margin-bottom: 1rem;
 }
+/*
+ * copied from katex/contrib/copy-tex.css
+ *
+ * Force selection of entire .katex/.katex-display blocks, so that we can
+ * copy/paste the entire source code.  If you omit this CSS, partial
+ * selections of a formula will work, but will copy the ugly HTML
+ * representation instead of the LaTeX source code.  (Full selections will
+ * still produce the LaTeX source code.)
+ */
+.katex,
+.katex-display {
+    user-select: all;
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+}
+
