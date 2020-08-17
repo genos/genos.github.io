@@ -82,10 +82,7 @@ body {
   font-kerning: normal;
   font-variant: common-ligatures;
   line-height: 175%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: 17%;
-  margin-right: 17%;
+  margin: 5% 17%;
   text-rendering: optimizeLegibility;
 }
 code {
@@ -176,6 +173,12 @@ p {
 }
 pre {
   margin-bottom: 1rem;
+}
+table {
+  width: 75%;
+}
+td {
+  text-align: center;
 }
 /*
  * copied from katex/contrib/copy-tex.css
