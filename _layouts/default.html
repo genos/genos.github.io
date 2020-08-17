@@ -16,15 +16,15 @@
     </div>
     <nav>
       <ul>
-        <li><a href="{{ site.baseurl }}">Home</a></li>
-        <li><a href="{{ site.baseurl }}about">About</a></li>
+        <li><a href="{{ "/" | relative_url }}">Home</a></li>
+        <li><a href="{{ "/about" | relative_url }}">About</a></li>
         <li><a href="https://github.com/genos">GitHub</a></li>
         <li><a href="https://twitter.com/graham_enos">Twitter</a></li>
       </ul>
     </nav>
-    <script type="text/javascript" src="{{ site.baseurl }}public/katex.min.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}public/copy-tex.min.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}public/auto-render.min.js"></script>
+    <script type="text/javascript" src="{{ "/public/katex.min.js" | relative_url }}"></script>
+    <script type="text/javascript" src="{{ "/public/copy-tex.min.js" | relative_url }}"></script>
+    <script type="text/javascript" src="{{ "public/auto-render.min.js" | relative_url }}"></script>
     <script>renderMathInElement(document.body);</script>
   </body>
 </html>
