@@ -6,7 +6,6 @@
     <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.tagline }}">
     <meta name="author" content="Graham Enos">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="{{ site.baseurl }}public/styles.css">
     <link rel="stylesheet" href="{{ site.baseurl }}public/katex.min.css">
   </head>
@@ -16,15 +15,15 @@
     </div>
     <nav>
       <ul>
-        <li><a href="{{ "/" | relative_url }}">Home</a></li>
-        <li><a href="{{ "/about" | relative_url }}">About</a></li>
+        <li><a href="{{ "/" | absolute_url }}">Home</a></li>
+        <li><a href="{{ "/about" | absolute_url }}">About</a></li>
         <li><a href="https://github.com/genos">GitHub</a></li>
         <li><a href="https://twitter.com/graham_enos">Twitter</a></li>
       </ul>
     </nav>
-    <script type="text/javascript" src="{{ "/public/katex.min.js" | relative_url }}"></script>
-    <script type="text/javascript" src="{{ "/public/copy-tex.min.js" | relative_url }}"></script>
-    <script type="text/javascript" src="{{ "public/auto-render.min.js" | relative_url }}"></script>
+    <script type="text/javascript" src="{{ "/public/katex.min.js" | absolute_url }}"></script>
+    <script type="text/javascript" src="{{ "/public/copy-tex.min.js" | absolute_url }}"></script>
+    <script type="text/javascript" src="{{ "public/auto-render.min.js" | absolute_url }}"></script>
     <script>renderMathInElement(document.body);</script>
   </body>
 </html>
