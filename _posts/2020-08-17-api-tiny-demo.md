@@ -1,5 +1,5 @@
 ---
-title: "Tiny Demo REST API"
+title: "Tiny Demo REST API in Python"
 layout: post
 ---
 
@@ -15,7 +15,7 @@ My demo uses the [Flask](https://flask.palletsprojects.com/) microframework to h
 Before we get into the specifics, here's how tiny the demo is: the whole thing, including a `default.nix` file to set the stage, is under 100 lines.
 
 ```
-~/github/Programming/workbench/tiny_demo_api ∃ scc --no-complexity --no-cocomo .
+~/github/Programming/workbench/tiny_demo_api ∃ scc --no-complexity --no-cocomo
 ───────────────────────────────────────────────────────────────────────────────
 Language                     Files       Lines     Blanks    Comments      Code
 ───────────────────────────────────────────────────────────────────────────────
