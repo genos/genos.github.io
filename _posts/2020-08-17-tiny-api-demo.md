@@ -1,5 +1,5 @@
 ---
-title: "Tiny Demo REST API in Python"
+title: "Tiny REST API Demo in Python"
 layout: post
 ---
 
@@ -8,14 +8,14 @@ layout: post
 The other day, someone asked me about the difference between "an API and a regular webpage."
 After understanding more about the context of their question, I tried to come up with a decent explanation about the differences between a server sending HTML pages and one handling REST API requests.
 As [a thousand words leave not the same deep impression as does a single deed](https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words#History), I thought I'd put together a tiny demonstration that serves HTML to a web browser and JSON over a REST endpoint.
-My demo uses the [Flask](https://flask.palletsprojects.com/) microframework to handle the details; you can find a copy [here](https://github.com/genos/Programming/tree/main/workbench/tiny_demo_api), though we'll go through some of it below.
+My demo uses the [Flask](https://flask.palletsprojects.com/) microframework to handle the details; you can find a copy [here](https://github.com/genos/tiny_api_demo), though we'll go through some of it below.
 
 # How smol?
 
 Before we get into the specifics, here's how tiny the demo is: the whole thing, including a `default.nix` file to set the stage, is under 100 lines.
 
 ```
-~/github/Programming/workbench/tiny_demo_api ∃ scc --no-complexity --no-cocomo
+~/github/tiny_api_demo ∃ scc --no-complexity --no-cocomo
 ───────────────────────────────────────────────────────────────────────────────
 Language                     Files       Lines     Blanks    Comments      Code
 ───────────────────────────────────────────────────────────────────────────────
@@ -97,20 +97,20 @@ def api(name):
 
 With the server running, we can visit the home page:
 
-<img src="{{ "/public/api_tiny_demo_index.png" | absolute_url }}" width="42%" alt="Homepage" />
+<img src="{{ "/public/tiny_api_demo_index.png" | absolute_url }}" width="42%" alt="Homepage" />
 
 Or report pages for any specific student:
 
-<img src="{{ "/public/api_tiny_demo_alice.png" | absolute_url }}" width="42%" alt="Alice's page" />
+<img src="{{ "/public/tiny_api_demo_alice.png" | absolute_url }}" width="42%" alt="Alice's page" />
 
 However, we can also get JSON data for individual students by pinging the REST endpoint; using, e.g. [HTTPie](https://httpie.org) to query the endpoint via `http --body :5000/api/Dave`, we get
 
-<img src="{{ "/public/api_tiny_demo_dave.png" | absolute_url}} " width="75%" alt="Dave's JSON" />
+<img src="{{ "/public/tiny_api_demo_dave.png" | absolute_url}} " width="75%" alt="Dave's JSON" />
 
 
 # Everything Else
 
-To round out the example, we also have [some minimal CSS](https://github.com/genos/Programming/tree/main/workbench/tiny_demo_api/static/styles.css) and [two other HTML templates](https://github.com/genos/Programming/tree/main/workbench/tiny_demo_api/templates).
+To round out the example, we also have [some minimal CSS](https://github.com/genos/tiny_api_demo/blob/main/static/styles.css) and [two other HTML templates](https://github.com/genos/tiny_api_demo/blob/main/templates).
 Here's the `default.nix` to specify the W O R L D:
 
 ```
@@ -118,7 +118,7 @@ let
   pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/20.03.tar.gz") { };
   py = pkgs.python38Full.withPackages (p: [ p.flask ]);
 in pkgs.stdenv.mkDerivation {
-  name = "tiny_demo_api";
+  name = "tiny_api_demo";
   buildInputs = [ py ];
   shellHooks = "export FLASK_APP=app.py";
 }
