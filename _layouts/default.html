@@ -6,8 +6,12 @@
     <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.tagline }}">
     <meta name="author" content="Graham Enos">
-    <link rel="stylesheet" href="{{ site.baseurl }}public/styles.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}public/katex.min.css">
+    <link rel="preload" href="{{ site.baseurl }}public/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="{{ site.baseurl }}public/styles.css"></noscript>
+    {% if page.use_katex %}
+    <link rel="preload" href="{{ site.baseurl }}public/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="{{ site.baseurl }}public/katex.min.css"></noscript>
+    {% endif %}
   </head>
   <body>
     <div>
@@ -21,9 +25,11 @@
         <li><a href="https://twitter.com/graham_enos">Twitter</a></li>
       </ul>
     </nav>
+    {% if page.use_katex %}
     <script type="text/javascript" src="{{ "/public/katex.min.js" | absolute_url }}"></script>
     <script type="text/javascript" src="{{ "/public/copy-tex.min.js" | absolute_url }}"></script>
     <script type="text/javascript" src="{{ "public/auto-render.min.js" | absolute_url }}"></script>
     <script>renderMathInElement(document.body);</script>
+    {% endif %}
   </body>
 </html>

@@ -1,6 +1,7 @@
 ---
 title: "Group Theory AND Statistics"
 layout: post
+use_katex: true
 ---
 
 # Diaconis does something cool, video at 11
