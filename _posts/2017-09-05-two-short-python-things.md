@@ -76,7 +76,7 @@ For instance, the `main` function for my scripts that once looked like this:
 ```python
 def main(args):
     """Performs the main work
-    
+
     Parameters
     ----------
     args: Namespace
@@ -93,7 +93,7 @@ now looks like this:
 ```python
 def main(args: Namespace) -> None:
     """Performs the main work
-    
+
     Parameters
     ----------
     args: Arguments passed on the command line, specifying what to do

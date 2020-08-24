@@ -1,6 +1,7 @@
 ---
 title: "Richard Stanley, Catalania, and Haskell"
 layout: post
+use_katex: true
 ---
 
 # Richard Stanley, Captain of Counting

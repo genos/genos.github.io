@@ -1,6 +1,7 @@
 ---
 title: "HyperLogLog is Wicked Cool"
 layout: post
+use_katex: true
 ---
 
 # How to count without counting

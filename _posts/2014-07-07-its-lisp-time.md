@@ -56,7 +56,7 @@ Lisp](http://www.paulgraham.com/onlisp.html) and Peter Norvig's
 [PAIP](https://en.wikipedia.org/wiki/Paradigms_of_AI_Programming%3A_Case_Studies_in_Common_Lisp).
 If I'm feeling particularly adventurous, I hope to read Doug Hoyte's [Let over
 Lambda](http://www.letoverlambda.com/).
-I've also been intrigued by Clojure recently,[^4] and have paging through some
+I've also been intrigued by Clojure recently,[^4] and have been paging through some
 of Fogus and Houser's [Joy of Clojure](http://joyofclojure.com/).
 
 # Comments/Questions/etc.?

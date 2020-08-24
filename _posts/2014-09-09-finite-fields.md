@@ -1,6 +1,7 @@
 ---
 title: "Finite Fields: Surprisingly Tricky to Implement Well"
 layout: post
+use_katex: true
 ---
 
 # Apologies

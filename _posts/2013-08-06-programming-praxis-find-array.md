@@ -1,6 +1,7 @@
 ---
 title: "Find X[i] = i in an array (Programming Praxis)"
 layout: post
+use_katex: true
 ---
 
 # Introduction
