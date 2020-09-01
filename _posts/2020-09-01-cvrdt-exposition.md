@@ -21,7 +21,7 @@ With this paper, Wikipedia, and some other references as my guide, I made a [Rus
 I really like how this crate uses two traits with associated types to describe CvRDTs, fitting them into a common framework.
 
 The first trait is for CvRDTs that can only grow, i.e. only add items.
-Here's an slightly modified version of it; the code (on [GitHub](https://github.com/genos/cvrdt-exposition), with documentation on [doc.rs](https://docs.rs/cvrdt-exposition/)) has more:
+Here's an slightly modified version of it; the code (on [GitHub](https://github.com/genos/cvrdt-exposition), with documentation on [docs.rs](https://docs.rs/cvrdt-exposition/)) has more:
 
 ```rust
 pub trait Grow: Clone {
