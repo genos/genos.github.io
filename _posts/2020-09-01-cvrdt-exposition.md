@@ -1,5 +1,5 @@
 ---
-title: "CvRDT Exposition"
+title: "CvRDT Exposition in Rust"
 layout: post
 ---
 
