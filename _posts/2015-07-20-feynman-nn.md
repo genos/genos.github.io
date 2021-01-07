@@ -24,7 +24,7 @@ of how they worked under the hood, I didn't really *grok* them; I had always
 turned to a library.
 Admittedly, turning to a well-developed library is exactly what one should do
 in production, but for my own edification I decided to put together [a Python
-implementation](https://github.com/genos/Programming/blob/master/workbench/nn.py)
+implementation](https://github.com/genos/Programming/blob/main/workbench/nn.py)
 of my own.
 This implementation is rather simplistic, but it has three features I like:
 

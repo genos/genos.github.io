@@ -71,7 +71,7 @@ highlights that `put` is different.
 # Implementation
 
 Here's my implementation in its entirety (again, head to
-[GitHub](https://github.com/genos/Programming/tree/master/workbench/ttkv) to
+[GitHub](https://github.com/genos/Programming/tree/main/workbench/ttkv) to
 see it in action):
 
 ```scala
@@ -117,7 +117,7 @@ In the room, I wrote some simple unit tests for my Python implementation.
 For this functional version, I put together some property-based tests with
 [`ScalaCheck`.](http://www.scalacheck.org)
 You can find the entirety on
-[GitHub](https://github.com/genos/Programming/tree/master/workbench/ttkv); I'll
+[GitHub](https://github.com/genos/Programming/tree/main/workbench/ttkv); I'll
 copy some highlights here.
 
 First off, calling `get` on an empty TTKV should return `None`:
@@ -221,4 +221,4 @@ lazy val root = (project in file("."))
 
 To run the tests, poke around in the code, etc. feel free to copy the whole
 `ttkv` directory from my [programming workbench on
-GitHub.](https://github.com/genos/Programming/tree/master/workbench/ttkv)
+GitHub.](https://github.com/genos/Programming/tree/main/workbench/ttkv)

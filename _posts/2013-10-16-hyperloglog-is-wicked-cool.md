@@ -42,4 +42,4 @@ It's very impressive.
 
 # Code
 For a (slapdash?) C++11 version of the final algorithm, head
-[here](https://github.com/genos/Programming/blob/master/workbench/hyperloglog.cc).
+[here](https://github.com/genos/Programming/blob/main/workbench/hyperloglog.cc).

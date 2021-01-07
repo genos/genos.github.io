@@ -112,9 +112,9 @@ version:
 # Testing
 
 My
-[`ttkv_spec.py`](https://github.com/genos/Programming/blob/master/workbench/ttkv_py/ttkv_spec.py)
+[`ttkv_spec.py`](https://github.com/genos/Programming/blob/main/workbench/ttkv_py/ttkv_spec.py)
 looks similar to the previous
-[`TTKVSpec.scala`](https://github.com/genos/Programming/blob/master/workbench/ttkv/src/test/scala/ttkv/TTKVSpec.scala),
+[`TTKVSpec.scala`](https://github.com/genos/Programming/blob/main/workbench/ttkv/src/test/scala/ttkv/TTKVSpec.scala),
 using the wonderful [`hypothesis`
 library](https://hypothesis.readthedocs.io/en/latest/) in place of `scalacheck`
 for property testing.
@@ -209,4 +209,4 @@ To run the tests, I usually enter `nix-shell --pure --run it` on the command
 line.
 To run the tests yourself, poke around in the code, etc. feel free to copy the
 whole `ttkv_py` directory from my [programming workbench on
-GitHub.](https://github.com/genos/Programming/tree/master/workbench/ttkv_py)
+GitHub.](https://github.com/genos/Programming/tree/main/workbench/ttkv_py)

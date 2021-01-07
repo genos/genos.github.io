@@ -104,7 +104,7 @@ that indices are nonnegative and we don't overtax my poor laptop's CPU.
 Of course, I'm open to criticism from any Haskell/QuickCheck gurus who'd like
 to help me tighten up my code.
 Feel free to [download the
-code](https://github.com/genos/Programming/blob/master/workbench/catalan.hs).
+code](https://github.com/genos/Programming/blob/main/workbench/catalan.hs).
 
 # To Be Continued
 That was fun; programming in Haskell almost always is, for me, and I'm by no
