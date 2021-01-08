@@ -7,7 +7,6 @@ title:               Graham Enos
 tagline:             "math, programming, statistics, and data"
 description:         "math, programming, statistics, and data"
 url:                 https://grahamenos.com
-baseurl:             /
 permalink:           none
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
@@ -16,4 +15,4 @@ kramdown:
 # About/contact
 author:
   name:              Graham Enos
-  url:               http://grahamenos.com
+  url:               https://grahamenos.com

@@ -6,11 +6,11 @@
     <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.tagline }}">
     <meta name="author" content="Graham Enos">
-    <link rel="preload" href="{{ site.baseurl }}public/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
-    <noscript><link rel="stylesheet" href="{{ site.baseurl }}public/styles.css"></noscript>
+    <link rel="preload" href="{{ "/public/styles.css" | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="{{ "/public/styles.css" | relative_url }}"></noscript>
 {% if page.use_katex %}
-    <link rel="preload" href="{{ site.baseurl }}public/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
-    <noscript><link rel="stylesheet" href="{{ site.baseurl }}public/katex.min.css"></noscript>
+    <link rel="preload" href="{{ "public/katex.min.css" | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="{{ "public/katex.min.css" | relative_url }}"></noscript>
 {% endif %}
   </head>
   <body>
