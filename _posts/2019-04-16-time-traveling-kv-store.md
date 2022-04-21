@@ -221,4 +221,4 @@ lazy val root = (project in file("."))
 
 To run the tests, poke around in the code, etc. feel free to copy the whole
 `ttkv` directory from my [programming workbench on
-GitHub.](https://github.com/genos/Programming/tree/main/workbench/ttkv)
+GitHub.](https://github.com/genos/Programming/tree/main/workbench/ttkv_sc)
