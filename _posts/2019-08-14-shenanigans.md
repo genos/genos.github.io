@@ -125,7 +125,7 @@ printing `"hello world"`.
 I recently came across a [fun
 post](https://aearnus.github.io/2019/08/07/d-d-rolls-in-perl-6) that describes
 implementing basic dice notation from Dungeons & Dragons in Perl 6.
-It's a fun read, so you should definitely check it, but its basic
+It's a fun read, so you should definitely check it out, but its basic
 implementation looks like this:
 
 ```perl
