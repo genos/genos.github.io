@@ -1,5 +1,5 @@
 ---
-title: "Algebraic Structure ⇒ Computational Benefits, Now With 100% More Oxidation"
+title: "Algebraic Structure ⇒ Computational Benefits, Now With 100% More Oxidization"
 layout: post
 ---
 
