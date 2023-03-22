@@ -1,6 +1,8 @@
 # Dependencies
 markdown:            kramdown
 highlighter:         rouge
+plugins:
+  - jekyll-feed
 
 # Setup
 title:               Graham Enos
