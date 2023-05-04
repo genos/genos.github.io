@@ -93,60 +93,79 @@ Then, we can provide a function to reproducibly run the above example.
 The `nix` expression to do so is rather long---though that's a small price to
 pay for the assurance we get.
 
-Here's the content of `default.nix`.
-Save this in a file called `default.nix`, and save the above `Clojure` code in `diaconis.clj` in the same directory.
-Then run `nix-shell --pure --run it` to see (eventually) the results.
+Here's the content of `flake.nix`.
+Save this in a file called `flake.nix`, and save the above `Clojure` code in `diaconis.clj` in the same directory.
+Then run `nix runt` to (eventually) see the results.
 
 ```nix
-with import <nixpkgs> {};
-let
-  buildLeinFromGitHub = { name, owner, repo, rev, sha256, cd }:
-  stdenv.mkDerivation {
-    name = name;
-    src = fetchFromGitHub {
-      owner = owner;
-      repo = repo;
-      rev = rev;
-      sha256 = sha256;
-    };
-      buildInputs = [ leiningen ];
-      buildPhase = ''
-        # https://blog.jeaye.com/2017/07/30/nixos-revisited/
-        export LEIN_HOME=$PWD/.lein
-        mkdir -p $LEIN_HOME
-        echo "{:user {:local-repo \"$LEIN_HOME\"}}" > $LEIN_HOME/profiles.clj
-        cd ${cd}
-        LEIN_SNAPSHOTS_IN_RELEASE=1 ${leiningen}/bin/lein uberjar
-      '';
-      installPhase = ''
-        cp target/${repo}*-standalone.jar $out
-      '';
+{
+  description = "Fourier Transform in Clojure";
+
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
   };
-  tesser = buildLeinFromGitHub {
-    name = "tesser";
-    owner = "aphyr";
-    repo = "tesser";
-    rev = "b7b67dfaf25f1764c70c90dc6681dd333d24d6a4";
-    sha256 = "1vma6ram4qs7llnfn84d4xvpn0q7kmzmkmsjpnkpqnryff9w2gvr";
-    cd = "core";
-  };
-  matrix = buildLeinFromGitHub {
-    name = "matrix";
-    owner = "mikera";
-    repo = "core.matrix";
-    rev = "f864c29d4e85d35de018295a87a295fc3df632a6";
-    sha256 = "1dywj2av5rwnv7qhh09lpx9c2kx7wvgllwyssvyr75cb6fa6smvg";
-    cd = ".";
-    };
-in
-  stdenv.mkDerivation {
-    name = "diaconis.clj";
-    src = ./.;
-    buildInputs = [ clojure jdk ];
-    shellHook = ''
-    it () {
-      java -cp ${tesser}:${matrix} clojure.main ${name}
-    }
-    '';
-  }
+
+  outputs = {
+    self,
+    flake-utils,
+    nixpkgs,
+  }:
+    flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = import nixpkgs {inherit system;};
+      leinFromGitHub = {
+        name,
+        owner,
+        repo,
+        rev,
+        sha256,
+        cd ? ".",
+      }:
+        pkgs.stdenv.mkDerivation {
+          name = name;
+          src = pkgs.fetchFromGitHub {
+            owner = owner;
+            repo = repo;
+            rev = rev;
+            sha256 = sha256;
+          };
+          buildInputs = [pkgs.leiningen];
+          # https://blog.jeaye.com/2017/07/30/nixos-revisited/
+          buildPhase = ''
+            export LEIN_HOME=$PWD/.lein
+            mkdir -p $LEIN_HOME
+            echo "{:user {:local-repo \"$LEIN_HOME\"}}" > $LEIN_HOME/profiles.clj
+            cd ${cd}
+            LEIN_SNAPSHOTS_IN_RELEASE=1 ${pkgs.leiningen}/bin/lein uberjar
+          '';
+          installPhase = ''
+            cp target/${repo}*-standalone.jar $out
+          '';
+        };
+      tesser = leinFromGitHub {
+        name = "tesser";
+        owner = "aphyr";
+        repo = "tesser";
+        rev = "d82895390264d8f6bf012fa4053a2003a500b574"; # release 1.0.4
+        sha256 = "0k2shy6ccig00lc9y6y8lyh7bnd250xxp5nh8fz254f2kq8ib4mn";
+        cd = "core";
+      };
+      matrix = leinFromGitHub {
+        name = "matrix";
+        owner = "mikera";
+        repo = "core.matrix";
+        rev = "07cb88b1b43ccc07f3f7e8634e1eccdb6986049b"; # develop branch as of 2021-11-19
+        sha256 = "1dn5hy5mdgl2bcmav8qll3qxqbscb340c462kkj728sfpk4ch5xd";
+      };
+    in {
+      packages.default = pkgs.writeShellApplication rec {
+        name = "diaconis.clj";
+        runtimeInputs = [pkgs.clojure pkgs.jdk];
+        text = ''
+          java -cp ${tesser}:${matrix} clojure.main ${name}
+        '';
+      };
+    });
+}
+
 ```

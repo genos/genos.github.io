@@ -12,20 +12,21 @@ My demo uses the [Flask](https://flask.palletsprojects.com/) microframework to h
 
 # How smol?
 
-Before we get into the specifics, here's how tiny the demo is: the whole thing, including a `default.nix` file to set the stage, is under 100 lines.
+Before we get into the specifics, here's how tiny the demo is: the whole thing, including a `flake.nix` file to set the stage, is under 115 lines.
 
 ```
-~/github/tiny_api_demo ∃ scc --no-complexity --no-cocomo
-───────────────────────────────────────────────────────────────────────────────
-Language                     Files       Lines     Blanks    Comments      Code
-───────────────────────────────────────────────────────────────────────────────
-HTML                             3          41          0           0        41
-Python                           2          52         12           2        38
-CSS                              1          10          0           0        10
-Nix                              1           9          0           0         9
-───────────────────────────────────────────────────────────────────────────────
-Total                            7         112         12           2        98
-───────────────────────────────────────────────────────────────────────────────
+~/github/tiny_api_demo ∃ tokei
+===============================================================================
+ Language            Files        Lines         Code     Comments       Blanks
+===============================================================================
+ CSS                     1           10           10            0            0
+ HTML                    3           41           41            0            0
+ Markdown                1           10            0            6            4
+ Nix                     1           25           23            0            2
+ Python                  2           54           40            2           12
+===============================================================================
+ Total                   8          140          114            8           18
+===============================================================================
 ```
 
 This whole thing cuts so many corners it might as well be a sphere.
@@ -111,17 +112,34 @@ However, we can also get JSON data for individual students by pinging the REST e
 # Everything Else
 
 To round out the example, we also have [some minimal CSS](https://github.com/genos/tiny_api_demo/blob/main/static/styles.css) and [two other HTML templates](https://github.com/genos/tiny_api_demo/blob/main/templates).
-Here's the `default.nix` to specify the W O R L D:
+Here's the `flake.nix` to specify the W O R L D:
 
-```
-let
-  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/20.03.tar.gz") { };
-  py = pkgs.python38Full.withPackages (p: [ p.flask ]);
-in pkgs.stdenv.mkDerivation {
-  name = "tiny_api_demo";
-  buildInputs = [ py ];
-  shellHooks = "export FLASK_APP=app.py";
+```nix
+{
+  description = "Tiny API Demo";
+
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+  };
+
+  outputs = {
+    self,
+    flake-utils,
+    nixpkgs,
+  }:
+    flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = import nixpkgs {inherit system;};
+      py = pkgs.python310.withPackages (p: [p.flask]);
+    in {
+      packages.default = pkgs.writeShellApplication {
+        name = "tiny_api_demo";
+        text = ''
+          FLASK_APP=app.py ${py}/bin/python -m flask run
+        '';
+      };
+    });
 }
 ```
 
-From the base directory, one can run `nix-shell --pure` to set up the environment, then `flask run` to kick off the server.
+From the base directory, one can run `nix run` to set up the environment and kick off the server.
