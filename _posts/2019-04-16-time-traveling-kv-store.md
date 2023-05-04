@@ -71,7 +71,7 @@ highlights that `put` is different.
 # Implementation
 
 Here's my implementation in its entirety (again, head to
-[GitHub](https://github.com/genos/Programming/tree/main/workbench/ttkv) to
+[GitHub](https://github.com/genos/Workbench/tree/main/ttkv_sc) to
 see it in action):
 
 ```scala
@@ -117,7 +117,7 @@ In the room, I wrote some simple unit tests for my Python implementation.
 For this functional version, I put together some property-based tests with
 [`ScalaCheck`.](http://www.scalacheck.org)
 You can find the entirety on
-[GitHub](https://github.com/genos/Programming/tree/main/workbench/ttkv); I'll
+[GitHub](https://github.com/genos/Workbench/tree/main/ttkv_sc); I'll
 copy some highlights here.
 
 First off, calling `get` on an empty TTKV should return `None`:
