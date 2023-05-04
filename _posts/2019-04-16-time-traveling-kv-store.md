@@ -71,7 +71,7 @@ highlights that `put` is different.
 # Implementation
 
 Here's my implementation in its entirety (again, head to
-[GitHub](https://github.com/genos/Workbench/tree/main/ttkv_sc) to
+[GitHub](https://github.com/genos/ttkv/tree/main/ttkv_sc) to
 see it in action):
 
 ```scala
@@ -178,23 +178,34 @@ property("middle get") = forAll {
 
 # Appendix
 
-Here's the `default.nix` file to specify the W O R L D:
+Here's the `flake.nix` file to specify the W O R L D:
 
 ```nix
-let
-  pkgs = import (
-    fetchTarball https://github.com/NixOS/nixpkgs/archive/19.03.tar.gz
-  ) {};
-in
-  pkgs.stdenv.mkDerivation {
-    name = "ttkv";
-    buildInputs = [ pkgs.sbt ];
-    shellHook = ''
-      it () {
-        ${pkgs.sbt}/bin/sbt test
-      }
-    '';
-  }
+{
+  description = "Scala TTKV";
+
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+  };
+
+  outputs = {
+    self,
+    flake-utils,
+    nixpkgs,
+  }:
+    flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = import nixpkgs {inherit system;};
+    in {
+      packages.default = pkgs.writeShellApplication {
+        name = "ttkv";
+        runtimeInputs = [pkgs.sbt];
+        text = ''
+          ${pkgs.sbt}/bin/sbt test
+        '';
+      };
+    });
+}
 ```
 
 The `build.sbt` is similarly minimal:
@@ -221,4 +232,4 @@ lazy val root = (project in file("."))
 
 To run the tests, poke around in the code, etc. feel free to copy the whole
 `ttkv` directory from my [programming workbench on
-GitHub.](https://github.com/genos/Programming/tree/main/workbench/ttkv_sc)
+GitHub.](https://github.com/genos/ttkv/tree/main/ttkv_sc)

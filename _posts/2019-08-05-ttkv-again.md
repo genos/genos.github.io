@@ -112,9 +112,9 @@ version:
 # Testing
 
 My
-[`ttkv_spec.py`](https://github.com/genos/Workbench/blob/main/ttkv_py/ttkv_spec.py)
+[`ttkv_spec.py`](https://github.com/genos/ttkv/blob/main/ttkv_py/ttkv_spec.py)
 looks similar to the previous
-[`TTKVSpec.scala`](https://github.com/genos/Workbench/blob/main/ttkv_sc/src/test/scala/ttkv/TTKVSpec.scala),
+[`TTKVSpec.scala`](https://github.com/genos/ttkv/blob/main/ttkv_sc/src/test/scala/ttkv/TTKVSpec.scala),
 using the wonderful [`hypothesis`
 library](https://hypothesis.readthedocs.io/en/latest/) in place of `scalacheck`
 for property testing.
@@ -187,26 +187,36 @@ large to fit into 64 bits.
 
 # Appendix
 
-Here's the `default.nix` file to specify the W O R L D:
+Here's the `flake.nix` file to specify the W O R L D:
 
 ```nix
-let
-  tgz = "https://github.com/NixOS/nixpkgs/archive/19.03.tar.gz";
-  pkgs = import (fetchTarball tgz) { };
-  py = pkgs.python36.withPackages (p: [ p.hypothesis p.pytest ]);
-in pkgs.stdenv.mkDerivation {
-  name = "ttkv";
-  buildInputs = [ py ];
-  shellHook = ''
-    it () {
-      pytest ttkv_spec.py
-    }
-  '';
+{
+  description = "Python TTKV";
+
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+  };
+
+  outputs = {
+    self,
+    flake-utils,
+    nixpkgs,
+  }:
+    flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = import nixpkgs {inherit system;};
+      python = pkgs.python311.withPackages (p: [p.hypothesis p.pytest]);
+    in {
+      packages.default = pkgs.writeShellApplication {
+        name = "ttkv";
+        text = ''
+          pytest ttkv_spec.py
+        '';
+      };
+    });
 }
 ```
 
-To run the tests, I usually enter `nix-shell --pure --run it` on the command
-line.
 To run the tests yourself, poke around in the code, etc. feel free to copy the
 whole `ttkv_py` directory from my [programming workbench on
-GitHub.](https://github.com/genos/Workbench/tree/main/ttkv_py)
+GitHub.](https://github.com/genos/ttkv/tree/main/ttkv_py)
