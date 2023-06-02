@@ -98,15 +98,15 @@ def api(name):
 
 With the server running, we can visit the home page:
 
-<img src="{{ "/public/tiny_api_demo_index.png" | absolute_url }}" width="42" alt="Homepage">
+<img src="{{ "/public/tiny_api_demo_index.png" | absolute_url }}" alt="Homepage">
 
 Or report pages for any specific student:
 
-<img src="{{ "/public/tiny_api_demo_alice.png" | absolute_url }}" width="42" alt="Alice's page">
+<img src="{{ "/public/tiny_api_demo_alice.png" | absolute_url }}" alt="Alice's page">
 
 However, we can also get JSON data for individual students by pinging the REST endpoint; using, e.g. [HTTPie](https://httpie.org) to query the endpoint via `http --body :5000/api/Dave`, we get
 
-<img src="{{ "/public/tiny_api_demo_dave.png" | absolute_url}} " width="75" alt="Dave's JSON">
+<img src="{{ "/public/tiny_api_demo_dave.png" | absolute_url}} " alt="Dave's JSON">
 
 
 # Everything Else

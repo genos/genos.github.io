@@ -137,6 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 img {
   display: block;
   margin: 0 auto;
+  max-width: 50%;
 }
 nav {
   font-family: 'Equity B', serif;
