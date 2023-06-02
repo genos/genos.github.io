@@ -127,19 +127,19 @@ Here are some gems I found combing through the PNGs:
 
 <table>
     <tr>
-        <td><img src="{{ "/public/126089461_7_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=126089461, depth=7 width & height=512" /></td>
-        <td><img src="{{ "/public/208259458_7_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=208259458, depth=7 width & height=512" /></td>
-        <td><img src="{{ "/public/347723950_7_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=347723950, depth=7 width & height=512" /></td>
+        <td><img src="{{ "/public/126089461_7_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=126089461, depth=7 width & height=512"></td>
+        <td><img src="{{ "/public/208259458_7_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=208259458, depth=7 width & height=512"></td>
+        <td><img src="{{ "/public/347723950_7_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=347723950, depth=7 width & height=512"></td>
     </tr>
     <tr>
-        <td><img src="{{ "/public/765744456_7_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=765744456, depth=7 width & height=512" /></td>
-        <td><img src="{{ "/public/983185677_6_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=983185677, depth=6 width & height=512" /></td>
-        <td><img src="{{ "/public/161582962_7_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=161582962, depth=7 width & height=512" /></td>
+        <td><img src="{{ "/public/765744456_7_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=765744456, depth=7 width & height=512"></td>
+        <td><img src="{{ "/public/983185677_6_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=983185677, depth=6 width & height=512"></td>
+        <td><img src="{{ "/public/161582962_7_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=161582962, depth=7 width & height=512"></td>
     </tr>
     <tr>
-        <td><img src="{{ "/public/176235008_7_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=176235008, depth=7 width & height=512" /></td>
-        <td><img src="{{ "/public/61786666_7_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=61786666, depth=6 width & height=512" /></td>
-        <td><img src="{{ "/public/627656271_7_512_512_rgb.png" | absolute_url }} " width="66%" alt="RGB Image for seed=627656271, depth=7 width & height=512" /></td>
+        <td><img src="{{ "/public/176235008_7_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=176235008, depth=7 width & height=512"></td>
+        <td><img src="{{ "/public/61786666_7_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=61786666, depth=6 width & height=512"></td>
+        <td><img src="{{ "/public/627656271_7_512_512_rgb.png" | absolute_url }} " width="66" alt="RGB Image for seed=627656271, depth=7 width & height=512"></td>
     </tr>
 </table>
 
