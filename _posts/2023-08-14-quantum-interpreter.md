@@ -43,4 +43,6 @@ OCaml) implementation(s):
 The implementation is
 [here](https://github.com/genos/Workbench/tree/main/quantum-interpreter) in my
 catch-all "workbench" repository.
+It's definitely _not_ production-worthy code; it's got an `assert!` that will
+panic if not met, and it uses `expect` to pave over some errors.
 Please feel free to take a look and let me know what you think!
