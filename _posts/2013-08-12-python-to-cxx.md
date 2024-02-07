@@ -3,6 +3,14 @@ title: "Python to C++; a silly idea?"
 layout: post
 ---
 
+# EDIT
+In the more than ten years since this I first wrote this,
+
+1. I have learned a lot about programming, programming languages, compilers, interpreters, and more; and
+2. The ecosystem around this kind of idea has changed a lot! See, for instance, [`mojo`](https://en.wikipedia.org/wiki/Mojo_(programming_language)).
+
+I'll leave the rest of this post untouched; please forgive past Graham's naivete!
+
 # Python type annotations
 In the 3.x series of the [Python](http://python.org) language, there's a
 [powerful,
@@ -16,7 +24,7 @@ thinking of a possible use for them: compiling Python to C++.
 I'm aware of the amazing [Cython](http://cython.org/) project, and
 [various](http://www.swig.org/) [other](http://docs.python.org/2/extending/)
 [options](http://cens.ioc.ee/projects/f2py2e/) when it comes to compiling code
-for faster Python execution.
+for faster Python runtimes.
 There's even [Shed Skin](https://code.google.com/p/shedskin/), a compiler that
 takes much of the 2.x Python standard to C++ already.
 Thus, this idea is nothing more than an excuse for me to learn more computer
@@ -61,7 +69,7 @@ auto f(int x, int y) -> int {
 }
 {% endhighlight %}
 Here's a slightly more involved example: what if we could compile a (_very_
-simple) Python class
+tiny) Python class
 {% highlight python %}
 class R2Point(object):
     __slots__ = ('x', 'y')
@@ -103,9 +111,8 @@ for (auto x: xs) {
 std::cout << std::accumulate(ys.begin(), ys.end(), 0) << std::endl;
 {% endhighlight %}
 
-Admittedly, these aren't very involved examples; the code is quite short and
-simple, and they don't involve translating Python idioms like list
-comprehensions into C++.
+Admittedly, these aren't very involved examples; the code is quite short, and
+they don't involve translating Python idioms like list comprehensions into C++.
 I still find them suggestive, though (at least, the first two).
 
 # Something else
@@ -131,7 +138,7 @@ be a chance for me to learn more about how programming languages are
 implemented and how compilation works.
 I had a lot of fun reading [this](http://createyourproglang.com/) stellar book,
 and might take its approach to this problem.
-I just thought it was interesting how similar the syntax of the two languages
+I thought it was interesting how similar the syntax of the two languages
 can look in their latest versions, and that got me wondering.
 If I take this idea anywhere, I'll be sure to write about it.
 
