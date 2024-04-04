@@ -63,6 +63,14 @@
   font-display: auto;
   src: url('fonts/triplicate_a_code_bold_italic.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'BQN386';
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: auto;
+  src: url('fonts/BQN386.woff2') format('woff2');
+}
 
 a {
   color: #02818a;
@@ -90,6 +98,9 @@ body {
 code {
   font-family: 'Triplicate A Code', monospace;
   font-size: 90%;
+}
+code.language-apl, code.language-bqn {
+  font-family: 'BQN386', monospace;
 }
 .date {
   font-family: 'Equity B', serif;
