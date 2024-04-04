@@ -60,7 +60,7 @@ we have the following distance matrix
 With this matrix, representing distances between vertices in our graph, we can
 use the APL matrix product operator `.` _with different operations_ to perform
 our calculations; instead of `+` and `×` for addition and multiplication, we
-turn to `⌊` for min and `+`; then `dist ⌊.+ dist` gives us the two-hop distances:
+turn to `⌊` (min) and `+`; then `dist ⌊.+ dist` gives us the two-hop distances:
 
 ```apl
       dist ⌊.+ dist
