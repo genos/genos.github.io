@@ -49,6 +49,7 @@ dist←6 6⍴0 7 9 inf inf 14 7 0 10 15 inf inf 9 10 0 11 inf 2 inf 15 11 0 6 in
 we have the following distance matrix
 
 ```apl
+      dist
 0.0E0  7.0E0  9.0E0  1.0E20 1E20 1.4E1
 7.0E0  0.0E0  1.0E1  1.5E1  1E20 1.0E20
 9.0E0  1.0E1  0.0E0  1.1E1  1E20 2.0E0
@@ -72,7 +73,7 @@ turn to `⌊` (min) and `+`; then `dist ⌊.+ dist` gives us the two-hop distanc
 11 12  2 13  9  0
 ```
 
-We can make this made more succinct with `⍨`, telling the interpreter to apply our
+We can make this more succinct with `⍨`, telling the interpreter to apply our
 function with `dist` as both arguments:
 
 ```apl
