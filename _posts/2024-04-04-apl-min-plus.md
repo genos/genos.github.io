@@ -101,8 +101,12 @@ power operator `⍣`; we can keep running `⌊.+` until the output matches (`≡
 11 12  2 13  9  0
 ```
 
-I can't help but feel that this was the type of thing Iverson meant by
-[notation as a tool of thought](https://www.jsoftware.com/papers/tot.htm).
+Imagine my surprise when I searched for "distance" in Iverson's [notation as a
+tool of thought](https://www.jsoftware.com/papers/tot.htm):
+
+> and if `p` gives distances from a source to transhipment points and `q` gives
+> distances from the transhipment points to the destination, then `p⌊.+q` gives
+> the minimum distance possible.
 
 
 [^1]: As Alan Kay [says](https://quoteinvestigator.com/2018/05/29/pov/), point
