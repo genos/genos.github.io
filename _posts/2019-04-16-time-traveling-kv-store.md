@@ -186,7 +186,7 @@ Here's the `flake.nix` file to specify the W O R L D:
 
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
   };
 
   outputs = {
@@ -215,15 +215,14 @@ lazy val root = (project in file("."))
   .settings(
     name := "ttkv",
     libraryDependencies ++= Seq(
-      "org.typelevel" %% "cats-effect" % "1.3.0",
-      "org.typelevel" %% "alleycats-core" % "1.6.0",
-      "org.scalacheck" %% "scalacheck" % "1.14.0" % "test"
+      "org.typelevel" %% "cats-effect" % "3.5.4",
+      "org.typelevel" %% "alleycats-core" % "2.10.0",
+      "org.scalacheck" %% "scalacheck" % "1.15.4" % "test"
     ),
     scalacOptions ++= Seq(
       "-feature",
       "-deprecation",
       "-unchecked",
-      "-language:postfixOps",
       "-language:higherKinds",
       "-Ypartial-unification"
     )
