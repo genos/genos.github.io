@@ -46,7 +46,7 @@ catch-all "workbench" repository.
 It's definitely _not_ production-worthy code; it's got an `assert!` that will
 panic if not met, and it uses `expect` to pave over some errors.
 _Update 2024-06-27: As of [this PR](https://github.com/genos/Workbench/pull/1),
-the code is a little more respectible now, with proper error handling via
-`Result` and no panics; that saide, I'd still advise against using it in a
+the code is a little more respectable now, with proper error handling via
+`Result` and no panics; that said, I'd still advise against using it in a
 production setting._
 Please feel free to take a look and let me know what you think!
