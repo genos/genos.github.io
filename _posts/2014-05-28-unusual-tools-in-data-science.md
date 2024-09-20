@@ -67,7 +67,7 @@ I'll just echo the
 of others out there and let you know that parsing ad hoc (or just new) file
 formats with Attoparsec leads to solutions that are
 
-- easier to read that regexes
+- easier to read than regexes
 - easier to reason about than regexes
 - easier to come back to and work on/extend later than regexes
 - ... and typically *very* fast
