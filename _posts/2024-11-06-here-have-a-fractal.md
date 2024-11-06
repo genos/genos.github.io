@@ -29,7 +29,7 @@ fn main() {
             z = z * z + c;
             i += 1.0;
         }
-        let n = (i as f32) + 1.0 - (0.5 * z.norm().ln()).log2();
+        let n = i + 1.0 - (0.5 * z.norm().ln()).log2();
         let h = (n * 360.0 / max_iter + 210.0) % 360.0;
         let v = (i < max_iter) as u8 as f32;
         let f = |n: f32| {
