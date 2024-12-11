@@ -71,7 +71,7 @@ pub struct Mul {
 
 I took up this trick after
 [learning](https://users.rust-lang.org/t/is-there-a-better-way-to-represent-an-abstract-syntax-tree/9549/4)
-more about it from the inimitable [matklad](https://matklad.github.io/).
+more about it from the inimitable [`matklad`](https://matklad.github.io/).
 As the linked response says, this keeps the size of the base enum smaller.
 In the source code, I've got a [property
 test](https://github.com/genos/Workbench/blob/main/ra/src/lib.rs#L230-L233)
