@@ -26,7 +26,7 @@ different implementations.
 The first implementation is the most basic, where we represent our AST directly:
 
 ```rust
-pub enum Expr {
+enum Expr {
     X,
     Y,
     SinPi(Box<Expr>),
@@ -44,7 +44,7 @@ order and it was the best I could come up with).
 In this version, the main `Expr` looks like
 
 ```rust
-pub enum Expr {
+enum Expr {
     X,
     Y,
     SinPi(Box<Expr>),
