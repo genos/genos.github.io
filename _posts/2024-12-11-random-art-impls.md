@@ -86,8 +86,8 @@ The final version follows [this
 comment](https://old.reddit.com/r/ProgrammingLanguages/comments/mrifdr/treewalking_interpreters_and_cachelocality/gumsi2v/)
 by [Bob Nystrom](https://craftinginterpreters.com/), modifying our flat version
 to implement a stack-based bytecode interpreter.
-Every subexpression is interpreted before larger expression that uses it, and
-the ordering of items is all that matters.
+Every subexpression is interpreted before the larger expression that uses it,
+and the ordering of items is all that matters.
 We can eschew any kind of pointing or indexing, and move directly to a stack of individual instructions:
 
 ```rust
