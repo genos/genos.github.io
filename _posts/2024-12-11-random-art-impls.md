@@ -127,7 +127,7 @@ though the savings are less dramatic.
 
 To keep myself honest, I also double-checked that versions yield equivalent
 results (at least, up to a certain depth) via some [property-based
-tests](https://github.com/genos/Workbench/blob/main/ra-impls/src/main.rs#L44-L70)
+tests](https://github.com/genos/Workbench/blob/main/ra-impls/src/main.rs#L44-L69)
 with the help of the exceptional [`proptest`
 crate](https://github.com/proptest-rs/proptest).
 
