@@ -74,7 +74,7 @@ I took up this trick after
 more about it from the inimitable [`matklad`](https://matklad.github.io/).
 As the linked response says, this keeps the size of the base enum smaller.
 In the source code, I've got a [property
-test](https://github.com/genos/Workbench/blob/main/ra/src/lib.rs#L230-L233)
+test](https://github.com/genos/Workbench/blob/main/ra/src/lib.rs#L242-L245)
 that asserts the size of an arbitrary[^2] `Expr` is exactly 16 bytes[^3]:
 
 ```rust
