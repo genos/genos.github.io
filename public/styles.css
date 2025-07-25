@@ -180,6 +180,11 @@ p {
 pre {
   margin-bottom: 1rem;
 }
+svg {
+  max-width: 50vw;
+  max-height: 50vh;
+  display: block;
+}
 table {
   width: 75%;
 }
