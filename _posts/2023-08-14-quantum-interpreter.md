@@ -27,8 +27,8 @@ Eventually I put together a [Rust
 implementation](https://github.com/genos/Workbench/tree/main/quantum-interpreter).
 This version weights in at more than twice the line count as the
 original---even though it relies on
-[`ndarray`](https://docs.rs/ndarray/latest/ndarray/index.html) for linear
-algebra instead of implementing it by hand!
+[`faer`](https://docs.rs/faer/latest/faer/index.html) for linear
+algebra instead of implementing it by hand![^1]
 However, it does have a couple of features not present in the original (or
 OCaml) implementation(s):
 
@@ -44,9 +44,9 @@ The implementation is
 [here](https://github.com/genos/Workbench/tree/main/quantum-interpreter) in my
 catch-all "workbench" repository.
 It's definitely _not_ production-worthy code; it's got an `assert!` that will
-panic if not met, and it uses `expect` to pave over some errors.
-_Update 2024-06-27: As of [this PR](https://github.com/genos/Workbench/pull/1),
-the code is a little more respectable now, with proper error handling via
-`Result` and no panics; that said, I'd still advise against using it in a
-production setting._
+panic if not met, and it uses `expect` to pave over some errors.[^2]
 Please feel free to take a look and let me know what you think!
+
+
+[^1]: The original version used `ndarray`, since I was more familiar with that crate.
+[^2]: Update 2024-06-27: As of [this PR](https://github.com/genos/Workbench/pull/1), the code is a little more respectable now, with proper error handling via `Result` and no panics; that said, I'd still advise against using it in a production setting.
