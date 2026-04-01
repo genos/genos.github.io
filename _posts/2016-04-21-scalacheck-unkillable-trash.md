@@ -9,8 +9,9 @@ I ran into an interesting problem in a recent
 Let's set the scene &hellip;
 
 # Quickly Checking in Scala
-In the project in question, I reached for [a library](http://argonaut.io/) to
-do a fair amount of JSON parsing.
+In the project in question, I reached for [a
+library](https://github.com/argonaut-io/argonaut) to do a fair amount of JSON
+parsing.
 I hadn't used the library before, so I ended up writing some
 [`ScalaCheck`](https://www.scalacheck.org/) tests for the convenience/wrapper
 functions I made.
