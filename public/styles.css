@@ -65,12 +65,12 @@
 }
 
 a {
-  color: #02818a;
+  color: #027f8d;
   text-decoration: none;
 }
 a:hover {
-  background: #3690c0;
-  color: #ece2f0;
+  background: #027f8d;
+  color: #fafafa;
 }
 blockquote {
   font-size: 90%;
@@ -110,7 +110,7 @@ strong {
   padding-top: 1rem;
 }
 a.footnote {
-  color: #02818a;
+  color: #027f8d;
   vertical-align: super;
 }
 a.footnote::after {
@@ -174,8 +174,8 @@ p {
   color: #000000;
 }
 .post-title a:hover {
-  background: #3690c0;
-  color: #ece2f0;
+  background: #027f8d;
+  color: #fafafa;
 };
 pre {
   margin-bottom: 1rem;
