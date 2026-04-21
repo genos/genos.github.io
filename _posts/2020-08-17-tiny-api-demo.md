@@ -13,9 +13,9 @@ My demo uses the [Flask](https://flask.palletsprojects.com/) microframework to h
 # How smol?
 
 Before we get into the specifics, here's how tiny the demo is: the whole thing, including a `flake.nix` file to set the stage, is under 115 lines.
+Via [`tokei`](https://github.com/XAMPPRocky/tokei):
 
-```
-~/github/tiny_api_demo ∃ tokei
+```markdown
 ===============================================================================
  Language            Files        Lines         Code     Comments       Blanks
 ===============================================================================
@@ -39,7 +39,7 @@ Pretend we're creating the _School Reporter 5000™_, wherein we have student in
 In `data.py`, we generate some fake data.
 Our application code will interface with this data via `NAMES` and `SELECT`; pretend this stands in for a proper database.
 
-```
+```python
 from datetime import datetime, timedelta
 from itertools import accumulate
 from operator import add
@@ -71,7 +71,7 @@ We serve HTML for the homepage at `/index.html` and individual person pages at `
 We also serve JSON in response to GET requests via the `/api/<name>` route.
 Thanks to [Flask](https://flask.palletsprojects.com/), we even have rudimentary error handling.
 
-```
+```python
 from flask import Flask, jsonify, render_template
 from data import NAMES, SELECT
 

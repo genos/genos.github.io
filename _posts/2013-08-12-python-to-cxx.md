@@ -4,7 +4,7 @@ layout: post
 ---
 
 # EDIT
-In the more than ten years since this I first wrote this,
+In the more than ten years since I first wrote this,
 
 1. I have learned a lot about programming, programming languages, compilers, interpreters, and more; and
 2. The ecosystem around this kind of idea has changed a lot! See, for instance, [`mojo`](https://en.wikipedia.org/wiki/Mojo_(programming_language)).
@@ -58,19 +58,19 @@ to C++11 code.
 # Suggestive examples
 Here are some slightly suggestive code examples that got me thinking.
 The idea would be to somehow compile (perfectly valid) Python 3 code like this:
-{% highlight python %}
+```python
 def f(x:int, y:int) -> int:
     return 2 * x + y
-{% endhighlight %}
+```
 into equivalent[^2] C++11 code:
-{% highlight c++ %}
+```c++
 auto f(int x, int y) -> int {
     return 2 * x + y;
 }
-{% endhighlight %}
+```
 Here's a slightly more involved example: what if we could compile a (_very_
 tiny) Python class
-{% highlight python %}
+```python
 class R2Point(object):
     __slots__ = ('x', 'y')
 
@@ -80,28 +80,28 @@ class R2Point(object):
 
     def __add__(self, other:R2Point) -> R2Point:
         return R2Point(self.x + other.x, self.y + other.y)
-{% endhighlight %}
+```
 into a C++11 struct
-{% highlight c++ %}
+```c++
 struct R2Point {
     int x, y;
     auto operator+(R2Point other) -> R2Point {
         return R2Point{x + other.x, y + other.y};
     }
 };
-{% endhighlight %}
+```
 We can even handle Python lambdas[^3], to some extent.
 This,
-{% highlight python %}
+```python
 f = lambda x: 2 * x
 xs = xrange(10)
 ys = []
 for x in xs:
     ys.append(f(x))
 print(sum(ys))
-{% endhighlight %}
+```
 might become
-{% highlight c++ %}
+```c++
 template <typename T> auto f = [](const T& x) { return 2 * x; }
 auto xs = std::vector<int>(10); std::iota(xs.begin, xs.end, 0);
 auto ys = std::vector<decltype(xs.front())>;
@@ -109,7 +109,7 @@ for (auto x: xs) {
     ys.push_back(f(x));
 }
 std::cout << std::accumulate(ys.begin(), ys.end(), 0) << std::endl;
-{% endhighlight %}
+```
 
 Admittedly, these aren't very involved examples; the code is quite short, and
 they don't involve translating Python idioms like list comprehensions into C++.

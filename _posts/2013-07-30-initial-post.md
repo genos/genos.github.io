@@ -17,10 +17,10 @@ Since this is my first post, I'm going to use this space for two things:
 My father the math-teacher-extraordinaire says that Euler's
 identity \\( e^{i\pi} + 1 = 0 \\) is proof of the existence of God.
 Here's some `Python` code that tries to verify this fact:
-{% highlight python %}
+```python
 from cmath import exp, pi
 print(exp((0 + 1j) * pi) + 1)
-{% endhighlight %}
+```
 Due precision issues, this probably won't come out to zero.
 However, it sure looks darn close.
 

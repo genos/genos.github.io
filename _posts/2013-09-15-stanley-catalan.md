@@ -32,7 +32,7 @@ In the interest of learning more Haskell, I decided to take some inspiration
 and play with Catalan numbers in that decidedly mathematical programming
 language.
 To start off with, I have some helpful imports and auxiliary functions:
-{% highlight haskell %}
+```haskell
 import Test.QuickCheck (quickCheck)
 
 -- helpers
@@ -45,14 +45,14 @@ factorial = product . enumFromTo 2
 pairs :: [a] -> [(a, a)]
 pairs xs = [(x, y) | x <- xs, y <- xs]
 
-{% endhighlight %}
+```
 The [QuickCheck](http://www.cse.chalmers.se/~rjmh/QuickCheck/) import will be
 important later.
 
 Next, with the help of [Rosetta
 Code](http://rosettacode.org/wiki/Catalan_numbers#Haskell) and Wikipedia, I
 have the following Catalan Number definitions:
-{% highlight haskell %}
+```haskell
 -- Catalan definitions
 cat0 :: [Integer]
 cat0 = map (\n -> product [n + 2..2 * n] `div` product [2..n]) [0..]
@@ -79,13 +79,13 @@ cat5 = map (\n -> binom (2 * n) n `div` (n + 1)) [0..]
 cat6 :: [Integer]
 cat6 = map c [0..]
   where c n = factorial (2 * n) `div` (factorial (n + 1) * factorial n)
-{% endhighlight %}
+```
 
 Finally, we'd like to show (or at least, verify for a certain number of test
 cases) that these varying definitions all describe the same thing; to do that,
 I decided to use a bit of QuickCheck's magic to test various items from these
 lists for equality:
-{% highlight haskell %}
+```haskell
 -- Check that these look the same
 prop_equal :: Int -> Bool
 prop_equal n = all p $ pairs cats
@@ -96,7 +96,7 @@ prop_equal n = all p $ pairs cats
 
 main :: IO ()
 main = quickCheck prop_equal
-{% endhighlight %}
+```
 This isn't perhaps the most elegant check---note that I restrict the integers
 tested to \\( \lbrace 0, 1, \ldots, 999 \rbrace
               = \phantom{ }^\mathbb{Z} /_{1000 \mathbb{Z}} \\) to make sure

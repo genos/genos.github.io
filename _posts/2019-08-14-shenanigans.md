@@ -72,7 +72,7 @@ _still prints "Hello world"!_
 After digging through the source, I decided to try my hand at recreating it in
 Python:
 
-```Python
+```python
 #!/usr/bin/env python3
 """For really clean programs"""
 
@@ -153,7 +153,7 @@ main = traverse_ (print =<<) [3 `d` 8, 2 `d` 20, 1 `d` 6]
 
 Running it via `./dnd.hs`[^1], I got
 
-```
+```haskell
 [6,6,3]
 [10,10]
 [2]

@@ -9,7 +9,9 @@ Apologies, as ever, for taking _so_ incredibly long between posts.
 That said if the inimitable Roger Peng can get away with letting some time
 lapse while working on a project, perhaps you can forgive me?
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Sometimes it takes a while for a project to get going. <a href="https://t.co/gQoKSyetWr">pic.twitter.com/gQoKSyetWr</a></p>&mdash; Roger D. Peng (@rdpeng) <a href="https://twitter.com/rdpeng/status/900699027108282368">August 24, 2017</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+> Sometimes it takes a while for a project to get going.
+>
+>   &mdash; Roger D. Peng (@rdpeng) August 24, 2017, Twitter
 
 # Back to Python
 

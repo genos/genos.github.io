@@ -44,46 +44,46 @@ Here's some `Python` code that computes this.
 
 First off, some useful imports.
 
-{% highlight python %}
+```python
 from collections import Counter
 from itertools import permutations
 import numpy as np
-{% endhighlight %}
+```
 
 Next, we define our representation function \\( \rho \\).
 
-{% highlight python %}
+```python
 def rho(p):
     return np.matrix([np.eye(len(p), dtype=int)[:, i] for i in p])
-{% endhighlight %}
+```
 
 After that, some (wicked short!) code to compute the transform
 \\( \hat{f} \\).
 
-{% highlight python %}
+```python
 def fft(ps):
     c = Counter(tuple(p) for p in ps)
     return sum(rho(p) * c[p] for p in c)
-{% endhighlight %}
+```
 
 The following code also works, but it doesn't technically follow the definition
 above since it hides \\( f \\).
 
-{% highlight python %}
+```python
 def fft2(ps):
     return sum(map(rho, ps))
-{% endhighlight %}
+```
 
 A quick function to normalize a table of counts to percentages instead:
 
-{% highlight python %}
+```python
 def table(xss):
     return 100 * xss / np.sum(xss, axis=1)
-{% endhighlight %}
+```
 
 And a quick check to see it in action:
 
-{% highlight python %}
+```python
 if __name__ == '__main__':
     N = 5
     S_N = np.array(list(permutations(range(N))))
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     fhat = fft(ps)
     print("Permutations:\n{0}\n\nFFT:\n{1}\n\nPercentages:\n{2}".format(
             ps, fhat, table(fhat)))
-{% endhighlight %}
+```
 
 # Fin.
 I'm very excited about this; using group theory to better understand statistics

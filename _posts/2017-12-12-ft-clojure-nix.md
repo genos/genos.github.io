@@ -95,7 +95,7 @@ pay for the assurance we get.
 
 Here's the content of `flake.nix`.
 Save this in a file called `flake.nix`, and save the above `Clojure` code in `diaconis.clj` in the same directory.
-Then run `nix runt` to (eventually) see the results.
+Then run `nix run` to (eventually) see the results.
 
 ```nix
 {

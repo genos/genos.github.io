@@ -41,14 +41,14 @@ min-+ semiring.
 Taking `exampleGraph2` from O'Connor's blog post, and letting \\( 10^{20} \\)
 stand in for \\( \infty \\)[^2]:
 
-```apl
+```text
 inf←1e20
 dist←6 6⍴0 7 9 inf inf 14 7 0 10 15 inf inf 9 10 0 11 inf 2 inf 15 11 0 6 inf inf inf inf 6 0 9 14 inf 2 inf 9 0
 ```
 
 we have the following distance matrix
 
-```apl
+```text
       dist
 0.0E0  7.0E0  9.0E0  1.0E20 1E20 1.4E1
 7.0E0  0.0E0  1.0E1  1.5E1  1E20 1.0E20
@@ -63,7 +63,7 @@ use the APL matrix product operator `.` _with different operations_ to perform
 our calculations; instead of `+` and `×` for addition and multiplication, we
 turn to `⌊` (min) and `+`; then `dist ⌊.+ dist` gives us the two-hop distances:
 
-```apl
+```text
       dist ⌊.+ dist
  0  7  9 20 23 11
  7  0 10 15 21 12
@@ -76,7 +76,7 @@ turn to `⌊` (min) and `+`; then `dist ⌊.+ dist` gives us the two-hop distanc
 We can make this more succinct with `⍨`, telling the interpreter to apply our
 function with `dist` as both arguments:
 
-```apl
+```text
       ⌊.+⍨ dist
  0  7  9 20 23 11
  7  0 10 15 21 12
@@ -91,7 +91,7 @@ Gauss-Jordan-Floyd-Warshall-Kleene algorithm in so few characters!
 Moreover, iterating that step until convergence is similarly succinct using the
 power operator `⍣`; we can keep running `⌊.+` until the output matches (`≡`) the input:
 
-```apl
+```text
       ⌊.+⍨⍣≡dist
  0  7  9 20 20 11
  7  0 10 15 21 12

@@ -16,22 +16,15 @@ However, don't read on if you prefer to solve the problem yourself first.
 # The question
 Programming Praxis asks,
 
-<blockquote>
-<p>
-Given an array <code>X[0 .. n - 1]</code> of integers sorted into ascending
-order with no duplicates, find an array item that is also its index, so that
-<code>X[i] = i</code>.
-</p>
-<p>
-For example, <code>X[3] = 3</code> in the array shown below:
-</p>
-<p>
-{% highlight text %}
-i     0 1 2 3 4 5
-X[i] -3 0 1 3 5 7
-{% endhighlight %}
-</p>
-</blockquote>
+> Given an array `X[0 .. n - 1]` of integers sorted into ascending order with
+> no duplicates, find an array item that is also its index, so that `X[i] = i`.
+>
+> For example, `X[3] = 3` in the array shown below:
+>
+> ```
+> i     0 1 2 3 4 5
+> X[i] -3 0 1 3 5 7
+> ```
 
 # Official solutions
 The first official solution is a simple linear search through the array; start
@@ -58,10 +51,10 @@ For example, one can quickly ask which elements of the vector `V` are less than
 ten by typing `V < 10`.
 
 Here's my R solution in full:[^2]
-{% highlight r %}
+```r
 X <- c(-3, 0, 1, 3, 5, 7)
 X[X == seq(length(X)) - 1]
-{% endhighlight %}
+```
 
 The first line simply assigns the example vector to the variable `X`, as we
 might expect; the `c()` function combines or concatenates its arguments.
@@ -107,13 +100,13 @@ As far as "executable math" is concerned, suppose we wanted, say, the sum of
 the first 17 natural numbers.
 In plain ol' C, we'd go with something like this:
 
-{% highlight c %}
+```c
 int sum = 0;
 for (int i = 0; i < 17; ++i) {
     sum += i;
 }
 printf("%d\n", sum);
-{% endhighlight %}
+```
 
 Expressing the same thing in J is much more declarative.
 In J, `i.17` is the first `17` natural numbers.
@@ -149,14 +142,14 @@ interesting idea and I will definitely explore it more.
 
 # A J solution
 Now for my J solution to the original question:
-{% highlight text %}
+```
 (I.@:=i.&#) _3 0 1 3 5 7
-{% endhighlight %}
+```
 or, if we assign the array the name `X`,
-{% highlight text %}
+```
 X =. _3 0 1 3 5 7
 I.X=i.#X
-{% endhighlight %}
+```
 I won't discuss the first one here (to be honest, I'm very new to J and don't
 understand it well enough).
 However, the second one should look an awful lot like the R solution we saw
