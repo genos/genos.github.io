@@ -15,7 +15,7 @@ My demo uses the [Flask](https://flask.palletsprojects.com/) microframework to h
 Before we get into the specifics, here's how tiny the demo is: the whole thing, including a `flake.nix` file to set the stage, is under 115 lines.
 Via [`tokei`](https://github.com/XAMPPRocky/tokei):
 
-```markdown
+```text
 ===============================================================================
  Language            Files        Lines         Code     Comments       Blanks
 ===============================================================================

@@ -86,7 +86,7 @@ order by table_name, index_name;
 
 When run, this query immediately returns something like[^2]
 
-```markdown
+```text
 |   index_name   |   table_name   |   index_size   |
 |----------------|----------------|----------------|
 |   unused_idx   |   a_table      |   1.81 GB      |
