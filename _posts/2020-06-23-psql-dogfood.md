@@ -69,7 +69,7 @@ indexes that were
 - not unique (`not a.indisunique`), so they're not primary keys[^1], and
 - never scanned (`d.idx_scan = 0`), so they're unused:
 
-```SQL
+```sql
 select
   c.relname as index_name,
   b.relname as table_name,
