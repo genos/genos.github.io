@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ config.title }} &middot; {{ config.description }}</title>
+    <meta name="description" content="{{ config.description }}">
+    <meta name="author" content="Graham Enos">
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="feed.xml">
+    <link rel="preload" href="{{ get_url(path="styles.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="{{ get_url(path="styles.css") }}"></noscript>
+{% if page.extra.use_katex %}
+    <link rel="preload" href="{{ get_url(path="katex.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="{{ get_url(path="katex.min.css") }}"></noscript>
+{% endif %}
+  </head>
+  <body>
+    <div>
+      {% block content %} {% endblock content %}
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{{ "/" }}">Home</a></li>
+        <li><a href="{{ "/about" }}">About</a></li>
+        <li><a href="{{ "/feed.xml" }}">RSS</a></li>
+        <li><a href="https://github.com/genos">GitHub</a></li>
+        <li><a href="https://mathstodon.xyz/@grahamenos">Mathstodon</a></li>
+      </ul>
+    </nav>
+{% if page.extra.use_katex %}
+    <script src="{{ get_url(path="katex.min.js") }}"></script>
+    <script src="{{ get_url(path="copy-tex.min.js") }}"></script>
+    <script src="{{ get_url(path="auto-render.min.js") }}"></script>
+    <script>renderMathInElement(document.body);</script>
+{% endif %}
+  </body>
+</html>

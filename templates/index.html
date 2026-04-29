@@ -1,0 +1,16 @@
+{% extends "default.html" %}
+{% block content %}
+<div class="greeting">
+  I'm <a href="about">Graham</a>, a quantum machine learning researcher, data scientist, and applied research mathematician.
+</div>
+<ul>
+  {% for page in section.pages %}
+  {% if page.title != "About" %}
+  <li class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+<div class="footer">
+  All writing on this site is <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">public domain</a>; all code is licensed under the <a rel="license" href="https://opensource.org/licenses/MIT">MIT License</a>.
+</div>
+{% endblock content %}
