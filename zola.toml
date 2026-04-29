@@ -4,7 +4,7 @@ title = "Graham Enos"
 description = "math, programming, statistics, and data"
 compile_sass = false
 build_search_index = false
-minify_html = false
+minify_html = true
 generate_feeds = true
 
 [markdown]
