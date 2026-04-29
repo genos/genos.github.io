@@ -19,11 +19,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v6.0.1
-
       - name: Build Zola + upload Pages artifact
-        uses: getzola/github-pages@066755243e69f508fd1a74739fbf1a65f656c790
+        uses: getzola/github-pages@435a833fd3f1edcb28d70576c89e30a6365cd8f7
         with:
-          zola_version: v0.22.0
+          zola_version: v0.22.1
 
   deploy:
     runs-on: ubuntu-latest
