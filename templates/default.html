@@ -6,7 +6,7 @@
     <title>{{ config.title }} &middot; {{ config.description }}</title>
     <meta name="description" content="{{ config.description }}">
     <meta name="author" content="Graham Enos">
-    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="atom.xml">
     <link rel="preload" href="{{ get_url(path="styles.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
     <noscript><link rel="stylesheet" href="{{ get_url(path="styles.css") }}"></noscript>
 {% if page.extra.use_katex %}
@@ -22,7 +22,7 @@
       <ul>
         <li><a href="{{ "/" }}">Home</a></li>
         <li><a href="{{ "/about" }}">About</a></li>
-        <li><a href="{{ "/feed.xml" }}">RSS</a></li>
+        <li><a href="{{ "/atom.xml" }}">RSS</a></li>
         <li><a href="https://github.com/genos">GitHub</a></li>
         <li><a href="https://mathstodon.xyz/@grahamenos">Mathstodon</a></li>
       </ul>
