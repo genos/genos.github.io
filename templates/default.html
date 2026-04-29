@@ -6,7 +6,9 @@
     <title>{{ config.title }} &middot; {{ config.description }}</title>
     <meta name="description" content="{{ config.description }}">
     <meta name="author" content="Graham Enos">
-    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="atom.xml">
+    {% block rss %}
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+    {% endblock %}
     <link rel="preload" href="{{ get_url(path="styles.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
     <noscript><link rel="stylesheet" href="{{ get_url(path="styles.css") }}"></noscript>
 {% if page.extra.use_katex %}
