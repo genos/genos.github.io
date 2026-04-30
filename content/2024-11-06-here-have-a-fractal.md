@@ -8,10 +8,9 @@ Today isn't great.
 I don't like it.
 So here, to take minds off things, have a fractal.
 
-![Mandelbrot Set](/mandelbrot.png)
+![Mandelbrot Set](/images/mandelbrot.png)
 
 Ugly Rust code, using `image` and `num_complex`:
-
 
 ```rust
 use image::{ImageBuffer, Rgb};

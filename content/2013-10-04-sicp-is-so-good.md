@@ -29,7 +29,7 @@ minimal barrier between expressing the ideas and executing them.
 Even with that said, I'm still in awe of how good this book is.
 
 # Case In Point
-As a case in point, I'll include a [quick write up](/continued_fraction.pdf) I
+As a case in point, I'll include a [quick write up](/pdfs/continued_fraction.pdf) I
 did to share with my Dad and his high school students.[^2]
 It was inspired by SICP's handling of an interesting continued fraction.
 

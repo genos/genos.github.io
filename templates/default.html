@@ -9,11 +9,11 @@
     {% block rss %}
     <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
     {% endblock %}
-    <link rel="preload" href="{{ get_url(path="styles.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <link rel="preload" href="{{ get_url(path="css/styles.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
     <noscript><link rel="stylesheet" href="{{ get_url(path="styles.css") }}"></noscript>
 {% if page.extra.use_katex %}
-    <link rel="preload" href="{{ get_url(path="katex.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
-    <noscript><link rel="stylesheet" href="{{ get_url(path="katex.min.css") }}"></noscript>
+    <link rel="preload" href="{{ get_url(path="css/katex.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="{{ get_url(path="css/katex.min.css") }}"></noscript>
 {% endif %}
   </head>
   <body>
@@ -30,9 +30,9 @@
       </ul>
     </nav>
 {% if page.extra.use_katex %}
-    <script src="{{ get_url(path="katex.min.js") }}"></script>
-    <script src="{{ get_url(path="copy-tex.min.js") }}"></script>
-    <script src="{{ get_url(path="auto-render.min.js") }}"></script>
+    <script src="{{ get_url(path="js/katex.min.js") }}"></script>
+    <script src="{{ get_url(path="js/copy-tex.min.js") }}"></script>
+    <script src="{{ get_url(path="js/auto-render.min.js") }}"></script>
     <script>renderMathInElement(document.body);</script>
 {% endif %}
   </body>

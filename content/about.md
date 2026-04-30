@@ -8,7 +8,7 @@ After that, I worked as a Senior Data Scientist for [Quantifind, Inc](https://ww
 Then I was a Lead Research Scientist, Quantum Advantage for [Rigetti Computing](https://www.rigetti.com), before starting my current role as Chief Scientist at [Strangeworks](https://strangeworks.com/).
 
 On this blog I explore those topics I never had the time to when I was working on my dissertation; essentially anything mathematical, computational, statistical, etc. that I happen to find interesting.
-For more about me, you can view my [CV](/genos_cv.pdf), my [GitHub](https://github.com/genos), my [GitLab](https://gitlab.com/grenos), or my [Mathstodon](https://mathstodon.xyz/@grahamenos).
+For more about me, you can view my [CV](/pdfs/genos_cv.pdf), my [GitHub](https://github.com/genos), my [GitLab](https://gitlab.com/grenos), or my [Mathstodon](https://mathstodon.xyz/@grahamenos).
 
 Obligatory notice: my views do not necessarily reflect those of anyone kind enough to employ me.
 

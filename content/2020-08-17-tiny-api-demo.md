@@ -97,15 +97,15 @@ def api(name):
 
 With the server running, we can visit the home page:
 
-![Homepage](/tiny_api_demo_index.png)
+![Homepage](/images/tiny_api_demo_index.png)
 
 Or report pages for any specific student:
 
-![Alice's page](/tiny_api_demo_alice.png)
+![Alice's page](/images/tiny_api_demo_alice.png)
 
 However, we can also get JSON data for individual students by pinging the REST endpoint; using, e.g. [HTTPie](https://httpie.org) to query the endpoint via `http --body :5000/api/Dave`, we get
 
-![Dave's JSON](/tiny_api_demo_dave.png)
+![Dave's JSON](/images/tiny_api_demo_dave.png)
 
 
 # Everything Else

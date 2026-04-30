@@ -142,11 +142,11 @@ interesting idea and I will definitely explore it more.
 
 # A J solution
 Now for my J solution to the original question:
-```
+```text
 (I.@:=i.&#) _3 0 1 3 5 7
 ```
 or, if we assign the array the name `X`,
-```
+```text
 X =. _3 0 1 3 5 7
 I.X=i.#X
 ```

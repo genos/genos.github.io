@@ -127,19 +127,19 @@ Here are some gems I found combing through the PNGs:
 
 <table>
     <tr>
-        <td><img src="/126089461_7_512_512_rgb.png" width="66" alt="RGB Image for seed=126089461, depth=7 width & height=512"></td>
-        <td><img src="/208259458_7_512_512_rgb.png" width="66" alt="RGB Image for seed=208259458, depth=7 width & height=512"></td>
-        <td><img src="/347723950_7_512_512_rgb.png" width="66" alt="RGB Image for seed=347723950, depth=7 width & height=512"></td>
+        <td><img src="/images/126089461_7_512_512_rgb.png" width="66" height="66" alt="RGB Image for seed=126089461, depth=7 width & height=512"></td>
+        <td><img src="/images/208259458_7_512_512_rgb.png" width="66" height="66" alt="RGB Image for seed=208259458, depth=7 width & height=512"></td>
+        <td><img src="/images/347723950_7_512_512_rgb.png" width="66" height="66" alt="RGB Image for seed=347723950, depth=7 width & height=512"></td>
     </tr>
     <tr>
-        <td><img src="/765744456_7_512_512_rgb.png" width="66" alt="RGB Image for seed=765744456, depth=7 width & height=512"></td>
-        <td><img src="/983185677_6_512_512_rgb.png" width="66" alt="RGB Image for seed=983185677, depth=6 width & height=512"></td>
-        <td><img src="/161582962_7_512_512_rgb.png" width="66" alt="RGB Image for seed=161582962, depth=7 width & height=512"></td>
+        <td><img src="/images/765744456_7_512_512_rgb.png" width="66" height="66" alt="RGB Image for seed=765744456, depth=7 width & height=512"></td>
+        <td><img src="/images/983185677_6_512_512_rgb.png" width="66" height="66" alt="RGB Image for seed=983185677, depth=6 width & height=512"></td>
+        <td><img src="/images/161582962_7_512_512_rgb.png" width="66" height="66" alt="RGB Image for seed=161582962, depth=7 width & height=512"></td>
     </tr>
     <tr>
-        <td><img src="/176235008_7_512_512_rgb.png" width="66" alt="RGB Image for seed=176235008, depth=7 width & height=512"></td>
-        <td><img src="/61786666_7_512_512_rgb.png"  width="66" alt="RGB Image for seed=61786666, depth=6 width & height=512"></td>
-        <td><img src="/627656271_7_512_512_rgb.png" width="66" alt="RGB Image for seed=627656271, depth=7 width & height=512"></td>
+        <td><img src="/images/176235008_7_512_512_rgb.png" width="66" height="66" alt="RGB Image for seed=176235008, depth=7 width & height=512"></td>
+        <td><img src="/images/61786666_7_512_512_rgb.png"  width="66" height="66" alt="RGB Image for seed=61786666, depth=6 width & height=512"></td>
+        <td><img src="/images/627656271_7_512_512_rgb.png" width="66" height="66" alt="RGB Image for seed=627656271, depth=7 width & height=512"></td>
     </tr>
 </table>
 

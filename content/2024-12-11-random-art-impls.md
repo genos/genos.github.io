@@ -114,11 +114,11 @@ pseudorandomly chosen `x` and `y`.
 Reaching for the amazing [`hyperfine`](https://github.com/sharkdp/hyperfine) to
 time our various approaches:
 
-![Hyperfine command for generating benchmarks](/ra_shell.png)
+![Hyperfine command for generating benchmarks](/images/ra_shell.png)
 
 We get the following times:
 
-![Plot of benchmark times by command](/ra_bench.png)
+![Plot of benchmark times by command](/images/ra_bench.png)
 
 Interestingly, there's a large time improvement in moving from the basic to the branch version alone!
 From there, we get further improvements moving to the flat and stack versions,

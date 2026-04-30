@@ -19,4 +19,4 @@ I also talked a little bit about one of my recent favorites, the
 it turns shortest-distance problems in graph theory into iterated linear
 algebra.
 
-Should any of this spark your interest, slides are available [here.](/ascb.pdf)
+Should any of this spark your interest, slides are available [here.](/pdfs/ascb.pdf)
