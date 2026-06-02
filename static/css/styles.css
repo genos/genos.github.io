@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: normal;
   font-stretch: normal;
-  font-display: auto;
+  font-display: swap;
   src: url('fonts/equity_b_regular.woff2') format('woff2');
 }
 @font-face {
@@ -11,7 +11,7 @@
   font-style: italic;
   font-weight: normal;
   font-stretch: normal;
-  font-display: auto;
+  font-display: swap;
   src: url('fonts/equity_b_italic.woff2') format('woff2');
 }
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: bold;
   font-stretch: normal;
-  font-display: auto;
+  font-display: swap;
   src: url('fonts/equity_b_bold.woff2') format('woff2');
 }
 @font-face {
@@ -27,7 +27,7 @@
   font-style: italic;
   font-weight: bold;
   font-stretch: normal;
-  font-display: auto;
+  font-display: swap;
   src: url('fonts/equity_b_bold_italic.woff2') format('woff2');
 }
 
@@ -36,7 +36,7 @@
   font-style: normal;
   font-weight: normal;
   font-stretch: normal;
-  font-display: auto;
+  font-display: swap;
   src: url('fonts/triplicate_a_code_regular.woff2') format('woff2');
 }
 @font-face {
@@ -44,7 +44,7 @@
   font-style: italic;
   font-weight: normal;
   font-stretch: normal;
-  font-display: auto;
+  font-display: swap;
   src: url('fonts/triplicate_a_code_italic.woff2') format('woff2');
 }
 @font-face {
@@ -52,7 +52,7 @@
   font-style: normal;
   font-weight: bold;
   font-stretch: normal;
-  font-display: auto;
+  font-display: swap;
   src: url('fonts/triplicate_a_code_bold.woff2') format('woff2');
 }
 @font-face {
@@ -60,7 +60,7 @@
   font-style: italic;
   font-weight: bold;
   font-stretch: normal;
-  font-display: auto;
+  font-display: swap;
   src: url('fonts/triplicate_a_code_bold_italic.woff2') format('woff2');
 }
 
