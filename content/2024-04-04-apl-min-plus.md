@@ -13,7 +13,7 @@ much simpler.[^1]
 In this semiring, instead of using the usual addition and multiplication,
 we replace them with minimum and addition, so, for instance, \\( 1 \oplus 2 = 1
 \\) and \\( 3 \otimes 2 = 5 \\).
-I've [written]({@/2023-05-11-kompreni.md) and
+I've [written](@/2023-05-11-kompreni.md) and
 [presented](@/2018-02-20-algebraic-structure.md) about
 [this](@/2022-09-13-ascb-in-rust.md) before.
 
