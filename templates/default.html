@@ -11,7 +11,7 @@
     {% endblock %}
     <link rel="preload" href="{{ get_url(path="css/styles.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
     <noscript><link rel="stylesheet" href="{{ get_url(path="styles.css") }}"></noscript>
-{% if page.extra.use_katex %}
+{% if config.extra.use_katex %}
     <link rel="preload" href="{{ get_url(path="css/katex.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
     <noscript><link rel="stylesheet" href="{{ get_url(path="css/katex.min.css") }}"></noscript>
 {% endif %}
@@ -29,7 +29,7 @@
         <li><a href="https://mathstodon.xyz/@grahamenos">Mathstodon</a></li>
       </ul>
     </nav>
-{% if page.extra.use_katex %}
+{% if config.extra.use_katex %}
     <script src="{{ get_url(path="js/katex.min.js") }}"></script>
     <script src="{{ get_url(path="js/copy-tex.min.js") }}"></script>
     <script src="{{ get_url(path="js/auto-render.min.js") }}"></script>
