@@ -18,11 +18,11 @@ jobs:
       contents: read  # reading
     steps:
       - name: checkout
-        uses: actions/checkout@v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
       - name: Build Zola + upload Pages artifact
-        uses: getzola/github-pages@v1
+        uses: getzola/github-pages@435a833fd3f1edcb28d70576c89e30a6365cd8f7 # v1
         with:
           zola_version: v0.23.3
 
@@ -39,4 +39,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5.0.0
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128  # v5.0.0
