@@ -1,7 +1,5 @@
 +++
 title = "Random Art with a Tiny Language"
-[extra]
-use_katex = true
 +++
 
 # PL Resources Everywhere

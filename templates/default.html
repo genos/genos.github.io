@@ -6,15 +6,11 @@
     <title>{{ config.title }} &middot; {{ config.description }}</title>
     <meta name="description" content="{{ config.description }}">
     <meta name="author" content="Graham Enos">
-    {% block rss %}
     <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
-    {% endblock %}
     <link rel="preload" href="{{ get_url(path="css/styles.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
     <noscript><link rel="stylesheet" href="{{ get_url(path="styles.css") }}"></noscript>
-{% if config.extra.use_katex %}
     <link rel="preload" href="{{ get_url(path="css/katex.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
     <noscript><link rel="stylesheet" href="{{ get_url(path="css/katex.min.css") }}"></noscript>
-{% endif %}
   </head>
   <body>
     <div>
@@ -29,11 +25,9 @@
         <li><a href="https://mathstodon.xyz/@grahamenos">Mathstodon</a></li>
       </ul>
     </nav>
-{% if config.extra.use_katex %}
     <script src="{{ get_url(path="js/katex.min.js") }}"></script>
     <script src="{{ get_url(path="js/copy-tex.min.js") }}"></script>
     <script src="{{ get_url(path="js/auto-render.min.js") }}"></script>
     <script>renderMathInElement(document.body);</script>
-{% endif %}
   </body>
 </html>

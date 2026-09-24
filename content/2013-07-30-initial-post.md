@@ -1,7 +1,5 @@
 +++
 title = "Initial Post"
-[extra]
-use_katex = true
 +++
 So... here's my first post.
 I've been inspired to keep a digital notebook/record of sorts, mostly to keep

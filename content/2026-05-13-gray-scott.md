@@ -1,7 +1,5 @@
 +++
 title = "Gray-Scott Reaction-Diffusion"
-[extra]
-use_katex = true
 +++
 
 # On a world Turing

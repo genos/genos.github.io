@@ -1,7 +1,5 @@
 +++
 title = "Tropical Semiring in Dyalog APL"
-[extra]
-use_katex = true
 +++
 
 # A few of my favorite things

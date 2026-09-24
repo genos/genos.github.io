@@ -1,7 +1,5 @@
 +++
 title = "Find X[i] = i in an array (Programming Praxis)"
-[extra]
-use_katex = true
 +++
 
 # Introduction

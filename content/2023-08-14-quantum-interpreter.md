@@ -1,7 +1,5 @@
 +++
 title = "A Rusty Quantum Interpreter"
-[extra]
-use_katex = true
 +++
 
 # The Original

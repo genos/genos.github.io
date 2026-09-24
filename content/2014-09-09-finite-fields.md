@@ -1,7 +1,5 @@
 +++
 title = "Finite Fields: Surprisingly Tricky to Implement Well"
-[extra]
-use_katex = true
 +++
 
 # Apologies

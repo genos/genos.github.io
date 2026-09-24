@@ -1,7 +1,5 @@
 +++
 title = "HyperLogLog is Wicked Cool"
-[extra]
-use_katex = true
 +++
 
 # How to count without counting

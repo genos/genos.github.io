@@ -1,7 +1,5 @@
 +++
 title = "Richard Stanley, Catalania, and Haskell"
-[extra]
-use_katex = true
 +++
 
 # Richard Stanley, Captain of Counting
