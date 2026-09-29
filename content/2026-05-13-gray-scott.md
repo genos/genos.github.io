@@ -4,7 +4,7 @@ title = "Gray-Scott Reaction-Diffusion"
 
 # On a world Turing
 
-I was recently one of the [luck 10,000](https://xkcd.com/1053/) when I stumbled
+I was recently one of the [lucky 10,000](https://xkcd.com/1053/) when I stumbled
 across [these implementations](https://github.com/dlozeve/reaction-diffusion)
 of [a Reaction-Diffusion
 system](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system) in APL
