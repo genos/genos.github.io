@@ -8,7 +8,9 @@ As a [friend of mine](https://www.linkedin.com/in/jamesquantum/) pointed out, a
 [fractal](@/2026-10-19-mulligan-serpent-ski.md) is more fun if you can zoom in on it!
 Rather than handle dragging & zooming myself, I'll reach for [Konva](https://konvajs.org/).
 A little longer this time, even with the help of [Konva's infinite canvas](https://konvajs.org/docs/sandbox/Infinite_Canvas.html)
-(_edit: especially when adding in_ [_pinch & zoom on mobile!_](https://konvajs.org/docs/sandbox/Multi-touch_Scale_Stage.html)):
+(_edit: Apologies, I can't seem to get_ [_pinch & zoom on
+mobile_](https://konvajs.org/docs/sandbox/Multi-touch_Scale_Stage.html)
+_working, so this is only with the mouse wheel {for now?}_):
 
 ```javascript
 const STAGE = new Konva.Stage({
