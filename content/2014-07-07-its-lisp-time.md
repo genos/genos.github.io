@@ -13,7 +13,7 @@ that C++11 has to offer, it's still rough going.
 And I've realized that it's not just because the code is, *ahem*, interesting.
 It's that my tools are a bit limiting.
 
-## Everything else is too limit{ed,ing}
+## Everything else is too limit\{ed,ing\}
 
 As it turns out, I'm finding more and more that the things people say singing
 the praises of Scheme and Common Lisp might be on to something.
